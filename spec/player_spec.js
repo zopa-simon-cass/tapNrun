@@ -19,7 +19,9 @@ describe("Player", () => {
   describe("Movement", () => {
 
     it("player moves", () => {
+      console.log(simon)
       simon.move();
+      console.log(simon)
       expect(simon.distance).toEqual(1);
     });
 
