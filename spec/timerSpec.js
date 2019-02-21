@@ -11,12 +11,15 @@ describe("Timer", function() {
   })
 
   it("starts at 0", function () {
-    expect(timer.count).toEqual("00:00:00")
+    expect(timer.time).toEqual("00:00:00")
   })
 
   it("starts when we call start method", function () { 
     timer.start()
-    expect(timer.count).not.toEqual("00:00:00")
+    expect(timer.interval)
+    expect(timer.time).not.toEqual("00:00:00")
   })
+
+
 
 })
