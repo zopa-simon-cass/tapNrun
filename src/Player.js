@@ -1,4 +1,4 @@
-function Player(position = 0, distance= 0) {
+function Player(canvas, position = 0, distance= 0) {
   this.position = position
   this.distance = distance
 }
