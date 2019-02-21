@@ -17,18 +17,23 @@ class Timer {
   }
 
   reset () {
-    timer.milliseconds = 0
+    this.milliseconds = 0
   }
+
+  // delta () {
+  //   var now = Date.now()
+  //   var timePassed = now - this.offset
+  //   this.offset = now
+  //   return timePassed
+  // }
 
   update () {
-    this.milliseconds += delta()
-  }
-
-  delta () {
+    // var timeGap = delta()
     var now = Date.now()
-    var timePassed = this.offset - now
+    var timePassed = now - this.offset
     this.offset = now
-    return timePassed
+    // return timePassed
+    this.milliseconds += timePassed
   }
 
   formatTime () {
