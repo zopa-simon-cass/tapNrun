@@ -14,4 +14,9 @@ describe("Timer", function() {
     expect(timer.count).toEqual("00:00:00")
   })
 
+  it("starts when we call start method", function () { 
+    timer.start()
+    expect(timer.count).not.toEqual("00:00:00")
+  })
+
 })

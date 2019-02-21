@@ -24,5 +24,8 @@
   "devDependencies": {
     "istanbul": "^0.4.5",
     "jasmine": "^3.3.1"
+  },
+  "dependencies": {
+    "easytimer.js": "^3.0.1"
   }
 }
