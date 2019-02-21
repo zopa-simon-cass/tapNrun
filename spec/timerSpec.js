@@ -7,7 +7,11 @@ describe("Timer", function() {
   })
 
   it("can be instantiated", function() {
-    console.log(timer)
     expect(timer instanceof Timer).toBeTruthy()
   })
+
+  it("starts at 0", function () {
+    expect(timer.count).toEqual("00:00:00")
+  })
+
 })
