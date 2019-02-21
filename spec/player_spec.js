@@ -18,15 +18,31 @@ describe("Player", () => {
 
   describe("Movement", () => {
 
+    beforeEach(() =>{
+        simon.move();
+      });
+
+
     it("player moves a distance", () => {
-      simon.move();
       expect(simon.distance).toEqual(1);
     });
 
     it("player moves a position", () => {
-      simon.move()
       expect(simon.position).toEqual(1);
     });
+
+    it ("Player moves distance cumulatively", () => {
+      simon.move()
+      expect(simon.distance).toEqual(2)
+    });
+
+    it ("Player position moves cumulateively", () => {
+      simon.move()
+      simon.move()
+      expect(simon.position).toEqual(3)
+    });
+
+
 
 
   });
