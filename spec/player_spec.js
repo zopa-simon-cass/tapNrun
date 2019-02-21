@@ -16,11 +16,14 @@ describe("Player", () => {
 
   });
 
-  // describe("Movement", () => {
-  //
-  //
-  // 
-  //
-  // });
+  describe("Movement", () => {
+
+    it("player moves", () => {
+      simon.move();
+      expect(simon.distance).toEqual(1);
+    });
+
+
+  });
 
 });
