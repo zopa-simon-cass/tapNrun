@@ -7,5 +7,5 @@ function Player(position = 0, distance= 0) {
 
 Player.prototype.move = function() {
   this.distance++;
-  return this.distance;
+  this.position++;
 }
