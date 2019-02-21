@@ -18,11 +18,14 @@ describe("Player", () => {
 
   describe("Movement", () => {
 
-    it("player moves", () => {
-      console.log(simon)
+    it("player moves a distance", () => {
       simon.move();
-      console.log(simon)
       expect(simon.distance).toEqual(1);
+    });
+
+    it("player moves a position", () => {
+      simon.move()
+      expect(simon.position).toEqual(1);
     });
 
 
