@@ -1,15 +1,13 @@
 class Timer {
   constructor() {
-    this.time = "00:00:00"
     this.milliseconds = 0
     this.offset
     this.interval
   }
 
   start () {
-    this.time = "00:01:35"
     this.count = 0
-    this.interval = setInterval(update, 10)
+    this.interval = setInterval(this.update, 10)
     this.offset = Date.now()
   }
 
@@ -19,13 +17,18 @@ class Timer {
   }
 
   reset () {
+    timer.milliseconds = 0
   }
 
   update () {
-    console.log("Hello")
+    this.milliseconds += delta()
   }
 
   delta () {
+    var now = Date.now()
+    var timePassed = this.offset - now
+    this.offset = now
+    return timePassed
   }
 
   formatTime () {
