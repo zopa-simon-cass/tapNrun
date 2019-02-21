@@ -14,10 +14,15 @@ describe("Timer", function() {
     expect(timer.time).toEqual("00:00:00")
   })
 
-  it("starts when we call start method", function () { 
+  it("starts when we call start method", function () {
     timer.start()
-    expect(timer.interval)
-    expect(timer.time).not.toEqual("00:00:00")
+    expect(timer.offset).toEqual(Date.now())
+  })
+
+  it("stops running the clock", function() {
+    timer.start()
+    timer.stop()
+    expect(timer.interval).toEqual(null)
   })
 
 
