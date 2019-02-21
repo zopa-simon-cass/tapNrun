@@ -14,8 +14,13 @@ describe("Player", () => {
       expect(simon.distance).toEqual(0);
     });
 
-
-
   });
+
+  // describe("Movement", () => {
+  //
+  //
+  // 
+  //
+  // });
 
 });
