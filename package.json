@@ -7,7 +7,9 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "coverage": "istanbul cover jasmine",
+    "showcoverage": "open coverage/lcov-report/index.html"
   },
   "repository": {
     "type": "git",
