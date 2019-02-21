@@ -4,5 +4,6 @@ class Timer {
   }
   
   start () {
+    this.count = "00:01:35"
   }
 }
