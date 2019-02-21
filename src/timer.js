@@ -35,10 +35,29 @@ class Timer {
     this.offset = this.now
     // return timePassed
     this.milliseconds += this.timePassed
-    console.log(this.milliseconds)
+    var timeFormat = this.formatTime()
+    console.log(timeFormat)
   }
 
   formatTime () {
+    var time = new Date(this.milliseconds)
+    var minutes = time.getMinutes().toString()
+    var seconds = time.getSeconds().toString()
+    var milliseconds = time.getMilliseconds().toString()
+
+    if (minutes.length < 2) {
+      minutes = "0" + minutes
+    }
+
+    if (seconds.length < 2) {
+      seconds = "0" + seconds
+    }
+
+    while (milliseconds.length < 3) {
+      milliseconds = "0" + milliseconds
+    }
+
+    return minutes + ":" + seconds + ":" + milliseconds
   }
 
 }

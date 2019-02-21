@@ -40,5 +40,9 @@ describe("Timer", function() {
     expect(timer.milliseconds).toEqual(0)
   })
 
+  it("checks the formt of the timer", function() {
+    expect(timer.formatTime()).toEqual("00:00:000")
+  })
+
 
 })
