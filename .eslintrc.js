@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jasmine": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -9,6 +10,8 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "no-undef": "off",
+        "no-unused-vars": "off",
         "indent": [
             "error",
             "tab"

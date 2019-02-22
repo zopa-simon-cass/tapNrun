@@ -6,10 +6,16 @@
   "directories": {
     "lib": "lib"
   },
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-core": "^3.3.0",
+    "karma": "^4.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-jasmine": "^2.0.1"
+  },
   "scripts": {
-    "test": "jasmine",
-    "coverage": "istanbul cover jasmine",
-    "showcoverage": "open coverage/lcov-report/index.html"
+    "test": "echo \"Error no tests provided\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,9 +26,5 @@
   "bugs": {
     "url": "https://github.com/scass91/tapNrun/issues"
   },
-  "homepage": "https://github.com/scass91/tapNrun#readme",
-  "devDependencies": {
-    "istanbul": "^0.4.5",
-    "jasmine": "^3.3.1"
-  }
+  "homepage": "https://github.com/scass91/tapNrun#readme"
 }
