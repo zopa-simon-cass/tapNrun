@@ -14,7 +14,7 @@ class Player {
   }
 
   move() {
-    this.x += 100;
+    this.x += 10;
     this.init();
   }
 
