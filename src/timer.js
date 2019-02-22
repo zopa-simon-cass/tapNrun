@@ -25,6 +25,7 @@ class Timer {
 		var timeGap = this.delta()
 		this.milliseconds += timeGap
 		var timeFormat = this.formatTime()
+		// eslint-disable-next-line no-console
 		console.log(timeFormat)
 	}
 
@@ -32,7 +33,6 @@ class Timer {
 		this.now = Date.now()
 		this.timePassed = this.now - this.offset
 		this.offset = this.now
-		console.log(this.timePassed)
 		return this.timePassed
 	}
 

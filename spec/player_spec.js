@@ -1,4 +1,5 @@
 describe("Player", () => {
+	var simon
 
 	beforeEach(() =>{
 		simon = new Player()
