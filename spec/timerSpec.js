@@ -5,7 +5,7 @@ describe("Timer", function() {
   beforeEach(function() {
     timer = new Timer
   })
-
+  
   it("can be instantiated", function() {
     expect(timer instanceof Timer).toBeTruthy()
   })
@@ -34,7 +34,6 @@ describe("Timer", function() {
   })
 
   it("checks that time is updated", function() {
-    // timer1 = jasmine.createSpyObj("timer", ["delta"])
     spyOn(timer, "delta").and.returnValue(132)
     timer.offset = Date.now()
     timer.update()
@@ -45,5 +44,15 @@ describe("Timer", function() {
     expect(timer.formatTime()).toEqual("00:00:000")
   })
 
+  //it("delta returns gap in time", function () {
+    //var timeOut
+    //var timeOut2
+    //timer.offset = Date.now()
+    ////spyOn(timer, "now").and.returnValue(568497)
+    ////spyOn(timer, "offset").and.returnValue(568490)
+    //timeOut = setTimeout(timer.delta.bind(timer), 2000)
+    //setTimeout(expect(timer.timePassed).toEqual(2000), 2000)
+    ////expect(timer.timePassed).toEqual(2000)
+  //})
 
 })

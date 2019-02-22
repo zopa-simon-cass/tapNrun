@@ -32,6 +32,7 @@ class Timer {
     this.now = Date.now()
     this.timePassed = this.now - this.offset
     this.offset = this.now
+    console.log(this.timePassed)
     return this.timePassed
   }
 
