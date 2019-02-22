@@ -15,7 +15,7 @@
     "karma-jasmine": "^2.0.1"
   },
   "scripts": {
-    "test": "echo \"Error no tests provided\" && exit 1"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
