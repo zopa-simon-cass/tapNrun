@@ -9,6 +9,7 @@
 ### Testing
 
 1. Run tests with Jasmine `open -a "Google Chrome" SpecRunner.html`
+2. Alternatively tests can be ran in Terminal using Karma `karma start`
 
 ### Code coverage
 
