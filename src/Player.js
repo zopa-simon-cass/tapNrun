@@ -2,8 +2,18 @@ class Player {
   constructor() {
     this.x = 100
     this.y = 100
+    this.init = function(){
+      var canvas = document.querySelector("canvas");
+      var ctx = canvas.getContext('2d');
+      ctx.beginPath();
+      ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+      ctx.stroke();
+      ctx.fill();
+    }
+    this.init();
   }
 }
+
 
 
 
