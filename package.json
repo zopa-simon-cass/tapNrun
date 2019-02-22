@@ -16,7 +16,7 @@
     "karma-jasmine": "^2.0.1"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "karma start --single-run"
   },
   "repository": {
     "type": "git",
