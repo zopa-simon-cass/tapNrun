@@ -8,7 +8,7 @@ module.exports = function(config) {
     // coverage reporter generates the coverage
     frameworks: ['jasmine'],
     reporters: ['progress', 'coverage'],
-    browsers: ['Chrome'],
+    browsers: ['Firefox'],
     preprocessors: {
       // source files, that you wanna generate coverage for
       // do not include tests or libraries
