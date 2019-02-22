@@ -15,9 +15,8 @@ describe("Player", () => {
     });
 
     it("player movement changes x co-orinates ", () => {
-      expect(tom.x).toEqual(100);
-      // tom.move();
-      expect(tom.x).toEqual(110);
+      tom.move();
+      expect(tom.x).toEqual(200);
     });
 
 
