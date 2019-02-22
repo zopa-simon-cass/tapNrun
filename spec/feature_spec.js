@@ -1,6 +1,7 @@
-describe("tapNrun", function() {
+//describe("tapNrun", function() {
 
-	describe("Start game", function() {
+	//describe("Start game", function() {
+
 
 		it("isnt started until clicked", function() {
 			var game = new Game()
