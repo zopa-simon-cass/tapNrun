@@ -15,7 +15,9 @@ describe("Display", () => {
     expect(player.x).toEqual(100)
   });
 
-
+  it("Expects the display class to create a player when the page loads", () => {
+    expect()
+  })
 
 
 
