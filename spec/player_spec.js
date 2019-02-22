@@ -1,5 +1,5 @@
 describe("Player", () => {
-	var simon
+
 
   describe("x and y ctx coordinates", () => {
 
@@ -17,13 +17,13 @@ describe("Player", () => {
 
     it("player movement changes x co-ordinates ", () => {
       tom.move();
-      expect(tom.x).toEqual(200);
+      expect(tom.x).toEqual(105);
     });
 
     it("consecutive player movement changes x co-ordinates ", () => {
       tom.move();
       tom.move();
-      expect(tom.x).toEqual(300);
+      expect(tom.x).toEqual(110);
     });
 
 
