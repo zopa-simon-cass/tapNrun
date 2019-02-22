@@ -10,8 +10,14 @@ describe("Player", () => {
       expect(tom.x).toEqual(jasmine.any(Number));
     });
 
-    it("player has y  coordinates", () => {
+    it("player has y coordinates", () => {
       expect(tom.y).toEqual(jasmine.any(Number));
+    });
+
+    it("player movement changes x co-orinates ", () => {
+      expect(tom.x).toEqual(100);
+      // tom.move();
+      expect(tom.x).toEqual(110);
     });
 
 
