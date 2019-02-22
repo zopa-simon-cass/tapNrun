@@ -24,8 +24,11 @@
           ctx.drawImage(background,0,0);
       }
       runner.onload = function(){
+        var playermove = new Player();
+        playermove.move();
           ctx.drawImage(runner,6,-5,100,180);
       }
+
       </script>
 
   </body>
