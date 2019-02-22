@@ -9,7 +9,7 @@ class Timer {
 
   start () {
     this.offset = Date.now()
-    this.interval = setInterval(this.update, 50)
+    this.interval = setInterval(this.update.bind(this), 10)
   }
 
   stop () {
@@ -21,22 +21,18 @@ class Timer {
     this.milliseconds = 0
   }
 
-  // delta () {
-  //   var now = Date.now()
-  //   var timePassed = now - this.offset
-  //   this.offset = now
-  //   return timePassed
-  // }
-
   update () {
-    // var timeGap = delta()
+    var timeGap = this.delta()
+    this.milliseconds += timeGap
+    var timeFormat = this.formatTime()
+    console.log(timeFormat)
+  }
+
+  delta () {
     this.now = Date.now()
     this.timePassed = this.now - this.offset
     this.offset = this.now
-    // return timePassed
-    this.milliseconds += this.timePassed
-    var timeFormat = this.formatTime()
-    console.log(timeFormat)
+    return this.timePassed
   }
 
   formatTime () {
@@ -44,19 +40,15 @@ class Timer {
     var minutes = time.getMinutes().toString()
     var seconds = time.getSeconds().toString()
     var milliseconds = time.getMilliseconds().toString()
-
     if (minutes.length < 2) {
       minutes = "0" + minutes
     }
-
     if (seconds.length < 2) {
       seconds = "0" + seconds
     }
-
     while (milliseconds.length < 3) {
       milliseconds = "0" + milliseconds
     }
-
     return minutes + ":" + seconds + ":" + milliseconds
   }
 

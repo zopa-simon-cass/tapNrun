@@ -14,10 +14,11 @@ describe("Timer", function() {
     expect(timer.milliseconds).toEqual(0)
   })
 
-  // it("starts when we call start method", function () {
-  //   timer.start()
-  //   expect(timer.interval + 1).toEqual(setInterval(timer.update, 10))
-  // })
+  it("starts when we call start method", function () {
+    timer.start()
+    expect(timer.interval).not.toEqual(null)
+    timer.stop()
+  })
 
   it("stops running the clock", function() {
     timer.start()
@@ -32,12 +33,12 @@ describe("Timer", function() {
     expect(timer.milliseconds).toEqual(0)
   })
 
-  it("checks that time is updated with delta method", function() {
+  it("checks that time is updated", function() {
     // timer1 = jasmine.createSpyObj("timer", ["delta"])
-    // spyOn(timer, "delta").and.returnValue(132)
+    spyOn(timer, "delta").and.returnValue(132)
     timer.offset = Date.now()
     timer.update()
-    expect(timer.milliseconds).toEqual(0)
+    expect(timer.milliseconds).toEqual(132)
   })
 
   it("checks the formt of the timer", function() {
