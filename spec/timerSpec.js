@@ -5,7 +5,7 @@ describe("Timer", function() {
 	beforeEach(function() {
 		timer = new Timer
 	})
-  
+
 	it("can be instantiated", function() {
 		expect(timer instanceof Timer).toBeTruthy()
 	})
