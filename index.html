@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
+  <meta charset="utf-8">
+  <title> T A P 'N' R U N</title>
+  <script src="src/Player.js"></script>
 
 </head>
-<body>
-  
+<body style="background-color:powderblue;" >
+  <center>
+    <h1> TAP 'N' RUN </h1>
+
+    <canvas id="canvas" width="500" height="500" tabindex="0" style="border: 10px solid black;"></canvas>
+    <script type="text/javascript">
+    var canvas = document.querySelector("canvas")
+    var player = new Player
+    canvas.onkeyup = function(e) {
+      if(e.keyCode == 32) {
+        player.move()
+      }
+    }
+
+    // addEventListener("keydown", Player.move(), true)
+
+    </script>
+  </center>
 </body>
 </html>
+
+
+
+<!-- circle that moves on click on x axis to other side of screen -->
+<!--  Set interval function, need an animation loop that starts with an
+empty canvas, then draws it
+neet to control canvas with keyboard.-->
+
+
+
+<!-- can test starting position coordinates, and then test how far it is after a certain amount of clicks  -->
