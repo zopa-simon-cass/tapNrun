@@ -3,19 +3,19 @@ describe("Movement", () => {
   describe("Movement can occur", () => {
 
     beforeEach(() => {
-      tom = new Player();
+      // tom = new Player();
       moving = new Movement();
     })
 
     it("player movement changes x co-ordinates ", () => {
-      moving.move(tom);
-      expect(tom.x).toEqual(105);
+      moving.move();
+      expect(moving.player.x).toEqual(105);
     });
 
     it("consecutive player movement changes x co-ordinates ", () => {
-      moving.move(tom);
-      moving.move(tom);
-      expect(tom.x).toEqual(110);
+      moving.move();
+      moving.move();
+      expect(moving.player.x).toEqual(110);
     })
   })
 })
