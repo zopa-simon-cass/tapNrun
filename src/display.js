@@ -1,15 +1,34 @@
 class Display {
   constructor() {
-    this.player = new Player()
+    this.canvas = document.querySelector("canvas");
+    this.player = new Player();
+    this.playerInit();
   }
 
   playerInit() {
-    var canvas = document.querySelector("canvas");
-    var ctx = canvas.getContext('2d');
-    ctx.beginPath();
-    ctx.clearRect(0, 0, 500, 500)
-    ctx.arc(this.x, this.y, 50, 0, 2 * Math.PI);
-    ctx.fill();
+      this.canvas.querySelector("canvas");
+      var ctx = this.canvas.getContext('2d');
+      ctx.beginPath();
+      ctx.clearRect(0, 0, 500, 500)
+      ctx.arc(this.player.x, this.player.y, 50, 0, 2 * Math.PI);
+      ctx.fill()
   }
 
+  // this.canvas.onkeyup = function(e) {
+  //   if(e.keyCode == 32) {
+  //     this.player.move()
+  //   }
+  // }
+
+  // addEventListener("keydown", Player.move(), true)
+
+
 }
+
+
+document.querySelector("canvas").onload = function(){
+  // console.log("fuck");
+  display = new Display()
+  // console.log(display);
+  display.playerInit();
+};
