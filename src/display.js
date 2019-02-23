@@ -1,7 +1,8 @@
 class Display {
   constructor() {
     this.canvas = document.querySelector('canvas');
-    this.player = new Player();
+    // this.movement = new Movement();
+    this.player = new Player
     this.playerDraw();
   }
 

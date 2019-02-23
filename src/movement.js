@@ -1,10 +1,10 @@
-class Movement {
-  constructor() {
-    this.player = new Player
-  }
-
-  move() {
-    this.player.x += 5;
-  }
-
-}
+// class Movement {
+//   constructor(player) {
+//     this.player = player
+//   }
+//
+//   move() {
+//     this.player.x += 5;
+//   }
+//
+// }

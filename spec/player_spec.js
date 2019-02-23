@@ -15,15 +15,16 @@ describe("Player", () => {
       expect(tom.y).toEqual(jasmine.any(Number));
     });
 
-    // it("player movement changes x co-ordinates ", () => {
-    //   tom.move();
-    //   expect(tom.x).toEqual(105);
-    // });
-    //
-    // it("consecutive player movement changes x co-ordinates ", () => {
-    //   tom.move();
-    //   tom.move();
-    //   expect(tom.x).toEqual(110);
+    it("player movement changes x co-ordinates ", () => {
+      tom.move();
+      expect(tom.x).toEqual(105);
+    });
+
+    it("consecutive player movement changes x co-ordinates ", () => {
+      tom.move();
+      tom.move();
+      expect(tom.x).toEqual(110);
+    })
   })
 
 })
