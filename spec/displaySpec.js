@@ -7,19 +7,13 @@ describe("Display", () => {
       player = new Player
     })
 
-  it("Display class is instanciated with a new instance of player", () => {
-    expect(display.player).toEqual(jasmine.any(Player));
-  });
+    it("Display class is instanciated with a new instance of player", () => {
+      expect(display.player).toEqual(jasmine.any(Player));
+    });
 
-  it("Player x cooridinates are initially 100", () => {
-    expect(player.x).toEqual(100)
-  });
-
-  it("Expects the display class to create a player when the page loads", () => {
-    expect()
-  })
-
-
+    it("Player x cooridinates are initially 100", () => {
+      expect(player.x).toEqual(100)
+    });
 
 
   });
