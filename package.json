@@ -6,7 +6,9 @@
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {},
+  "dependencies": {
+    "karma-cli": "^2.0.0"
+  },
   "devDependencies": {
     "jasmine-core": "^3.3.0",
     "karma": "^4.0.0",
