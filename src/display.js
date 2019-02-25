@@ -8,7 +8,7 @@ class Display {
   }
 
   infiniteDraw() {
-    this.interval = setInterval(this.drawCanvas.bind(this), 10)
+    this.interval = setInterval(this.drawCanvas.bind(this), 100)
   }
 
   drawCanvas() {
@@ -19,7 +19,7 @@ class Display {
     ctx.fill()
     ctx.font = "30px sans-serif"
     this.timer.start()
-    ctx.fillText("Time: " + this.timer.formatTime(), 270, 450)
+    ctx.fillText(this.timer.formatTime(), 330, 450)
   }
 
 
