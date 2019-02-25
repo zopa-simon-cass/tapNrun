@@ -2,7 +2,11 @@ module.exports = function(config) {
   config.set({
     files: [
       'src/*.js',
-      'spec/*.js'
+      'spec/featureSpec.js',
+      'spec/gameSpec.js',
+      'spec/movementSpec.js',
+      'spec/playerSpec.js',
+      'spec/timerSpec.js'
     ],
 
     // coverage reporter generates the coverage
