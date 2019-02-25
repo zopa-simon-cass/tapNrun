@@ -5,6 +5,8 @@ class Timer {
 		this.now
 		this.timePassed
 		this.interval
+    this.x = 180
+    this.y = 180
 	}
 
 	start () {
@@ -26,7 +28,7 @@ class Timer {
 		this.milliseconds += timeGap
 		var timeFormat = this.formatTime()
 		// eslint-disable-next-line no-console
-		console.log(timeFormat)
+		return timeFormat
 	}
 
 	delta () {
