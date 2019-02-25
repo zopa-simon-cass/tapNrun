@@ -8,7 +8,7 @@ class Display {
   }
 
   infiniteDraw() {
-    this.interval = setInterval(this.drawCanvas.bind(this), 100)
+    this.interval = setInterval(this.drawCanvas.bind(this), 10)
   }
 
   drawCanvas() {
@@ -24,7 +24,3 @@ class Display {
 
 
 }
-
-document.addEventListener("DOMContentLoaded", function(event) {
-  display = new Display()
-});
