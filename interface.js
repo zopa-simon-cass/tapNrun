@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   display.controller.enableControls();
   display.timer.start();
 
-  document.getElementById("canvas").addEventListener("onClick", display.drawCanvas())
+  display.canvas.addEventListener("mousedown", function () {
+    display.drawCanvas();
+    display.infiniteDraw();
+  })
   document.addEventListener("keydown", display.player.move(), true)
 })
