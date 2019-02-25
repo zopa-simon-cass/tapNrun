@@ -3,8 +3,8 @@ class Display {
     this.canvas = document.querySelector('canvas');
 
     this.timer = new Timer
-    this.controller = new Controller
     this.player = new Player
+    this.controller = new Controller
     this.interval
     this.infiniteDraw()
   }
