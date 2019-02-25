@@ -5,8 +5,6 @@ class Timer {
 		this.now
 		this.timePassed
 		this.interval
-    this.x = 180
-    this.y = 180
 	}
 
 	start () {

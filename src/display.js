@@ -1,12 +1,20 @@
 class Display {
   constructor() {
     this.canvas = document.querySelector('canvas');
-
     this.timer = new Timer
     this.player = new Player
     this.controller = new Controller
     this.interval
-    this.infiniteDraw()
+
+  }
+
+  startButton() {
+    var ctx = this.canvas.getContext('2d');
+    let img = new Image()
+    img.src = ("./assets/pixel-start.jpg")
+    img.onload = function() {
+      ctx.drawImage(img,0, 0, 500, 500)
+    }
   }
 
   infiniteDraw() {
@@ -21,7 +29,6 @@ class Display {
     ctx.fill()
     ctx.font = "30px sans-serif"
     // LINE BELOW WILL START TIMER, WILL SOON BE MOVED TO MENU CLASS
-    this.timer.start()
     ctx.fillText(this.timer.formatTime(), 330, 450)
   }
 
