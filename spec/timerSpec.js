@@ -21,14 +21,14 @@ describe("Timer", function() {
 	})
 
 	it("stops running the clock", function() {
-		timer.start()
-		timer.stop()
+    timer.start()
+    timer.stop()
 		expect(timer.interval).toEqual(null)
 	})
 
 	it("resets the clock to zero ater stopping", function() {
-		timer.start()
-		timer.stop()
+    timer.start()
+    timer.stop()
 		timer.reset()
 		expect(timer.milliseconds).toEqual(0)
 	})
