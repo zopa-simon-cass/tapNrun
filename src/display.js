@@ -10,7 +10,6 @@ class Display {
     this.controller = new Controller
     this.interval
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 10)
-    // this.infiniteDraw()
     // this.timer.start()
   }
 
@@ -31,7 +30,7 @@ class Display {
     var ctx = this.canvas.getContext('2d');
     ctx.beginPath();
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    ctx.arc(this.player.x, this.player.y, 50, 0, 2 * Math.PI);
+    ctx.arc(this.player.x, this.player.y, 40, 0, 2 * Math.PI);
     ctx.fill()
     ctx.font = "30px sans-serif"
     // LINE BELOW WILL START TIMER, WILL SOON BE MOVED TO MENU CLASS
@@ -39,7 +38,7 @@ class Display {
   }
 
   trackPlayer() {
-    if (this.player.x > 105 && this.player.x < this.finishLine) {
+    if (this.player.x > 45 && this.player.x < this.finishLine) {
       this.timer.start()
     }
     if (this.player.x > this.finishLine) {
