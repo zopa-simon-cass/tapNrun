@@ -40,11 +40,9 @@ class Display {
 
   trackPlayer() {
     if (this.player.x > 105 && this.player.x < this.finishLine) {
-      console.log('starting');
       this.timer.start()
     }
     if (this.player.x > this.finishLine) {
-      console.log('stopping');
       this.timer.stop()
       clearInterval(this.stopwatch);
     }
