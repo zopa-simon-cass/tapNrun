@@ -38,14 +38,17 @@ class Display {
   }
 
   trackPlayer() {
-    if (this.player.x > 4 && this.player.x < this.finishLine) {
+    if (this.player.x > 15 && this.player.x < 20) {
       this.timer.start()
+      clearInterval(this.stopwatch)
+      this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
     }
+  }
+
+  trackFinish() {
     if (this.player.x > this.finishLine) {
       this.timer.stop()
       clearInterval(this.stopwatch);
     }
-    // this.trackPlayer()
   }
-
 }

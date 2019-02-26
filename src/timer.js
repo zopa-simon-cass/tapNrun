@@ -10,11 +10,13 @@ class Timer {
 	start () {
 		this.offset = Date.now()
 		this.interval = setInterval(this.update.bind(this), 10)
+    console.log("Starting")
 	}
 
 	stop () {
 		clearInterval(this.interval)
 		this.interval = null
+    console.log("Stopping")
 	}
 
 	reset () {
