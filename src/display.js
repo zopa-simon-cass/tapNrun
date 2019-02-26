@@ -39,7 +39,6 @@ class Display {
   }
 
   trackPlayer() {
-    console.log("working?");
     if (this.player.x > 105 && this.player.x < this.finishLine) {
       console.log('starting');
       this.timer.start()
