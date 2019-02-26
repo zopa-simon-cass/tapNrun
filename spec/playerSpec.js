@@ -17,13 +17,13 @@ describe("Player", () => {
 
     it("player movement changes x co-ordinates ", () => {
       tom.move();
-      expect(tom.x).toEqual(105);
+      expect(tom.x).toEqual(46);
     });
 
     it("consecutive player movement changes x co-ordinates ", () => {
       tom.move();
       tom.move();
-      expect(tom.x).toEqual(110);
+      expect(tom.x).toEqual(51);
     })
   })
 
