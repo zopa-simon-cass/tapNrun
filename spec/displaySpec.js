@@ -1,7 +1,5 @@
 describe("Display", () => {
 
-  describe("Player class", () => {
-
     beforeEach(() => {
       display = new Display
       // player = new Player
@@ -11,12 +9,8 @@ describe("Display", () => {
       expect(display.player).toEqual(jasmine.any(Player));
     });
 
-    it("Player x cooridinates are initially 100", () => {
-      expect(display.player.x).toEqual(100)
-    });
-
-
-  });
-
+    // it("Player x cooridinates are initially 100", () => {
+    //   expect(display.player.x).toEqual(100)
+    // });
 
 });
