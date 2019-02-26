@@ -30,23 +30,12 @@ class Display {
     var ctx = this.canvas.getContext('2d');
     ctx.beginPath();
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    this.makeBase();
     ctx.arc(this.player.x, this.player.y, 50, 0, 2 * Math.PI);
     ctx.fill()
     ctx.font = "30px sans-serif"
     // LINE BELOW WILL START TIMER, WILL SOON BE MOVED TO MENU CLASS
     ctx.fillText(this.timer.formatTime(), 700, 450)
   }
-
-  makeBase() {
-    var ctx = this.canvas.getContext('2d');
-    let img = new Image()
-    img.src = ("./assets/Background1.png")
-    img.onload = function() {
-      ctx.drawImage(img, 0, 0, 900, 500)
-    }
-  }
-
 
   trackPlayer() {
     if (this.player.x > 105 && this.player.x < this.finishLine) {
