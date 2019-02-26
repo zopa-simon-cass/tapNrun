@@ -29,7 +29,7 @@ class Display {
   drawCanvas() {
     var ctx = this.canvas.getContext('2d');
     let img = new Image()
-    img.src = ("./assets/Subomi.png")
+    img.src = ("./assets/Joao.png")
     ctx.beginPath()
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
     ctx.drawImage(img, this.player.x, this.player.y, 100,100 )
