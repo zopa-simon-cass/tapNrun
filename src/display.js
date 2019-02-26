@@ -9,7 +9,7 @@ class Display {
     this.player = new Player
     this.controller = new Controller
     this.interval
-    this.stopwatch = setInterval(this.trackPlayer.bind(this), 1000)
+    this.stopwatch = setInterval(this.trackPlayer.bind(this), 10)
     // this.infiniteDraw()
     // this.timer.start()
   }
