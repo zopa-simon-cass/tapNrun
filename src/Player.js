@@ -5,7 +5,7 @@ class Player {
   }
 
   move() {
-    this.x += 12;
+    this.x += 5;
   }
 
 }
