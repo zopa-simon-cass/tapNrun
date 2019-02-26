@@ -1,11 +1,11 @@
 class Player {
   constructor() {
-    this.x = 41
-    this.y = 85
+    this.x = -8
+    this.y = 35
   }
 
   move() {
-    this.x += 5;
+    this.x += 12;
   }
 
 }
