@@ -7,8 +7,8 @@ module.exports = function(config) {
       'spec/buttonSpec.js',
       'spec/playerSpec.js',
       'spec/timerSpec.js',
-      'spec/controllerSpec.js',
-      'spec/displaySpec.js'
+      'spec/controllerSpec.js'
+     // 'spec/displaySpec.js'
     ],
 
     // coverage reporter generates the coverage
