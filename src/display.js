@@ -28,12 +28,11 @@ class Display {
 
   drawCanvas() {
     var ctx = this.canvas.getContext('2d');
-    ctx.beginPath();
+    let img = new Image()
+    img.src = ("./assets/Subomi.png")
+    ctx.beginPath()
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    ctx.arc(this.player.x, this.player.y, 40, 0, 2 * Math.PI);
-    ctx.fill()
-    ctx.font = "30px sans-serif"
-    // LINE BELOW WILL START TIMER, WILL SOON BE MOVED TO MENU CLASS
+    ctx.drawImage(img, this.player.x, this.player.y, 100,100 )
     ctx.fillText(this.timer.formatTime(), 700, 450)
   }
 
