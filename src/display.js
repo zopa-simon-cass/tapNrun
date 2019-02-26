@@ -38,7 +38,7 @@ class Display {
   }
 
   trackPlayer() {
-    if (this.player.x > 105 && this.player.x < this.finishLine) {
+    if (this.player.x > 45 && this.player.x < this.finishLine) {
       this.timer.start()
     }
     if (this.player.x > this.finishLine) {
