@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  
+
+  var user = prompt("What is your name?", "Bea");
+  if (user != null) {
+    document.getElementById("player1").innerHTML =
+      "Lane 1:  " + user;
+  }
+
   display = new Display();
   display.startButton()
 
