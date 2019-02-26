@@ -1,7 +1,7 @@
 class Player {
   constructor() {
-    this.x = 100
-    this.y = 100
+    this.x = 41
+    this.y = 85
   }
 
   move() {
