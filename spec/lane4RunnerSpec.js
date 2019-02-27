@@ -24,6 +24,11 @@ describe("Runner in Lane 4", () => {
       lane4runner.move();
       expect(lane4runner.x).toEqual(54);
     })
+
+    it("Player reset changes position back to the start line", () => {
+      lane4runner.reset();
+      expect(lane4runner.x).toEqual(50)
+    })
   })
 
 })

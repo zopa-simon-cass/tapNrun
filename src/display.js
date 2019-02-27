@@ -60,9 +60,9 @@ class Display {
     var player2Position = this.player2.x > 4 //&& this.player2.x < this.finishLine
     if (player1Position || player2Position) {
       this.timer.start()
+      display.aiMovement();
       clearInterval(this.stopwatch)
       this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
-      display.aiMovement();
     }
     if (this.player.x > this.finishLine) {
       this.timer.stop()
@@ -100,6 +100,9 @@ class Display {
 
   restart() {
     this.player.reset()
+    this.player2.reset()
+    this.lane3runner.reset()
+    this.lane4runner.reset()
     this.timer.reset()
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
   }
