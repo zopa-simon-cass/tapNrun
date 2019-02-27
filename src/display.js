@@ -48,7 +48,7 @@ class Display {
   }
 
   trackPlayer() {
-    if (this.player.x > 15 && this.player.x < 20) {
+    if (this.player.x > 4 && this.player.x < this.finishLine) {
       this.timer.start()
       display.aiMovement();
       clearInterval(this.stopwatch)
