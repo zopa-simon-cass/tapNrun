@@ -29,7 +29,4 @@ describe("Player2", ()=> {
       expect(player.x).toEqual(-8)
     })
   })
-
-
-  })
 })
