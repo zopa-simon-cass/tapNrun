@@ -9,7 +9,7 @@ class Display {
     this.player = new Player
     this.controller = new Controller
     this.interval
-    this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
+    this.stopwatch = setInterval(this.trackPlayer.bind(this), 10)
     // this.timer.start()
   }
 
@@ -41,7 +41,7 @@ class Display {
     if (this.player.x > 15 && this.player.x < 20) {
       this.timer.start()
       clearInterval(this.stopwatch)
-      this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
+      this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
     }
   }
 
