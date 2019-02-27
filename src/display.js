@@ -81,23 +81,6 @@ class Display {
     }
   }
 
-  //trackPlayer() {
-
-    //if (this.player.x > 3 || this.player2.x > 3) {
-      //this.timer.start()
-      //display.aiMovement();
-      //clearInterval(this.stopwatch)
-      //this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
-    //}
-
-    //     if (this.player.x > 4 && this.player.x < this.finishLine) {
-    //       this.timer.start()
-    //       display.aiMovement();
-    //       clearInterval(this.stopwatch)
-    //       this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
-    //     }
-  //}
-
   trackFinish() {
     if (this.player.x > this.finishLine) {
       this.player.moveAllowed = false
