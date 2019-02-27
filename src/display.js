@@ -62,9 +62,14 @@ class Display {
     img.onload = function() {
       ctx.drawImage(img, 225, 125, 450, 250)
     }
-    this.player.reset()
     this.player.moveAllowed = false
+    this.restart()
+  }
+
+  restart() {
+    this.player.reset()
     this.timer.reset()
+    this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
   }
 
 }
