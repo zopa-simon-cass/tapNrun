@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       display.drawCanvas();
       display.infiniteDraw();
       display.player.moveAllowed = true;
+      display.player2.moveAllowed = true;
       display.controller.enableControls();
     }
   })
