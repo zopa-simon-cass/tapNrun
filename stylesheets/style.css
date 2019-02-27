@@ -1,0 +1,30 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #FFCC00;
+  min-width: 500px;
+  min-height: 500px;
+}
+
+h1 {
+  color: #060505;
+  font-size: 65px;
+}
+
+#title span{
+  font-size: 80px;
+}
+
+#standings {
+  position: fixed;
+  align-items: center;
+  align-self: center;
+  display: inline-block;
+}
+
+#canvas {
+  background-position: center;
+  background-size:     cover;
+  background-repeat: no-repeat;
+}

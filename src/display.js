@@ -1,8 +1,8 @@
 class Display {
   constructor() {
     this.canvas = document.querySelector('canvas');
-    this.canvas.width = 900
-    this.canvas.height = 500
+    // this.canvas.width = (window.innerWidth - 400)
+    // this.canvas.height = (window.innerHeight - 250)
     // FINISH LINE NEEDS TO BE MADE ADAPTIVE/ NOT 150
     this.finishLine = 150
     this.timer = new Timer
@@ -14,11 +14,13 @@ class Display {
   }
 
   startButton() {
+    this.canvas.width = (window.innerWidth - 400)
+    this.canvas.height = (this.canvas.width * 0.5)
     var ctx = this.canvas.getContext('2d');
     let img = new Image()
     img.src = ("./assets/pixel-start.jpg")
     img.onload = function() {
-      ctx.drawImage(img, 0, 0, 900, 500)
+      ctx.drawImage(img, 0, 0, (window.innerWidth - 400), (window.innerHeight - 250))
     }
   }
 
@@ -27,14 +29,20 @@ class Display {
   }
 
   drawCanvas() {
+    this.canvas.style.backgroundImage = "url('./assets/Background1.png')";
+    this.canvas.backgroundPosition = "50%, 50%";
+    this.canvas.style.backgroundHeight = "100%";
+    this.canvas.style.backgroundWidth = "100%";
+    document.querySelector('canvas').style.objectFit = "cover";
+
     var ctx = this.canvas.getContext('2d');
     let img = new Image()
     img.src = ("./assets/Joao.png")
     ctx.beginPath()
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    ctx.drawImage(img, this.player.x, this.player.y, 100,100 )
-    ctx.font = "30px sans-serif";
-    ctx.fillText(this.timer.formatTime(), 745, 490)
+    ctx.drawImage(img, this.player.x, this.player.y, (this.canvas.width / 9 ),(this.canvas.height / 5) )
+    ctx.font = `${this.canvas.width / 30}px sans-serif`;
+    ctx.fillText(this.timer.formatTime(), (this.canvas.width - 250), (this.canvas.height - 10))
   }
 
   trackPlayer() {
