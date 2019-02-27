@@ -116,6 +116,8 @@ class Display {
     this.player2.reset()
     this.timer.reset()
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
+    this.time1 = null
+    this.time2 = null
   }
 
 }
