@@ -16,13 +16,13 @@ describe("Runner in Lane 4", () => {
 
     it("player movement changes x co-ordinates ", () => {
       lane4runner.move();
-      expect(lane4runner.x).toEqual(4);
+      expect(lane4runner.x).toEqual(-3);
     });
 
     it("consecutive player movement changes x co-ordinates ", () => {
       lane4runner.move();
       lane4runner.move();
-      expect(tom.x).toEqual(16);
+      expect(lane4runner.x).toEqual(2);
     })
   })
 
