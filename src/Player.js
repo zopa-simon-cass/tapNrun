@@ -1,7 +1,7 @@
 class Player {
   constructor() {
-    this.x = Math.round(window.innerWidth * ( -0.002 / 0.3))
-    this.y = Math.round(window.innerWidth * ( 0.0008 / 0.1))
+    this.x = -55
+    this.y = 26
   }
 
   move() {

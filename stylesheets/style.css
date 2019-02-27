@@ -5,6 +5,8 @@ body {
   background-color: #FFCC00;
   min-width: 500px;
   min-height: 500px;
+  max-width: 1280;
+  max-height: 481;
 }
 
 h1 {
