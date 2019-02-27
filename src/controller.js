@@ -1,14 +1,16 @@
 class Controller {
   constructor() {
     this.canvas = document.querySelector("canvas");
-    this.controllerEnabled = false
   }
 
   enableControls() {
     this.canvas.onkeyup = function(e) {
-      if(e.keyCode == 32) {
+      if(e.keyCode == 65) {
         display.player.move()
-        this.controllerEnabled = true
+ 
+      }
+      if(e.keyCode == 76) {
+        display.player2.move()
       }
     }
   }

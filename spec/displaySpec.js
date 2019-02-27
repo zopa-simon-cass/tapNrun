@@ -13,9 +13,9 @@ describe("Display", () => {
       expect(display.player.x).toEqual(-8)
     });
 
+    it("Display class is instanciated with a runner in lane 3", () => {
+      expect(display.lane3runner).toEqual(jasmine.any(Lane3Runner));
+    });
+
 
   });
-
-
-
-});
