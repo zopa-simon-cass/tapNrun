@@ -9,10 +9,4 @@ describe("Controller", () => {
     expect(controller.canvas).toEqual(document.getElementById('canvas'));
   });
 
-  it("testing enableControls", () => {
-    controller.enableControls()
-    expect(true).toEqual(true);
-  });
-
-
 });
