@@ -5,6 +5,11 @@ class Player2 {
   }
 
   move() {
-    this.x += 12;
+    this.x += 5;
+  }
+
+  reset() {
+    this.x = -8
+    this.y = 160
   }
 }

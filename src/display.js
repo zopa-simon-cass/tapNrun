@@ -60,9 +60,9 @@ class Display {
     var player2Position = this.player2.x > 4 //&& this.player2.x < this.finishLine
     if (player1Position || player2Position) {
       this.timer.start()
+      display.aiMovement();
       clearInterval(this.stopwatch)
       this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
-      display.aiMovement();
     }
     if (this.player.x > this.finishLine) {
       this.timer.stop()

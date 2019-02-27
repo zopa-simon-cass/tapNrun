@@ -7,7 +7,7 @@ class Player {
 
   move() {
     if (this.moveAllowed === true) {
-      this.x += 50;
+      this.x += 5;
     }
   }
 

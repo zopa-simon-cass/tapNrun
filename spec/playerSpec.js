@@ -5,6 +5,7 @@ describe("Player", () => {
 
     beforeEach(() => {
       tom = new Player();
+      tom.moveAllowed = true;
     })
 
     it("player has x coordinates", () => {
@@ -17,7 +18,7 @@ describe("Player", () => {
 
     it("player movement changes x co-ordinates ", () => {
       tom.move();
-      expect(tom.x).toEqual(4);
+      expect(tom.x).toEqual(-3);
     });
 
     it("player movement does not change y co-ordinate ", () => {
@@ -28,7 +29,12 @@ describe("Player", () => {
     it("consecutive player movement changes x co-ordinates ", () => {
       tom.move();
       tom.move();
-      expect(tom.x).toEqual(16);
+      expect(tom.x).toEqual(2);
+    })
+
+    it("Player reset changes position back to the start line", () => {
+      tom.reset();
+      expect(tom.x).toEqual(-8)
     })
   })
 
