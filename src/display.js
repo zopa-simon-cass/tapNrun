@@ -7,7 +7,9 @@ class Display {
     this.finishLine = 780
     this.timer = new Timer
     this.player = new Player
+    this.player2 = new Player2
     this.controller = new Controller
+    this.controller2 = new Controller
     this.interval
     this.lane3runner = new Lane3Runner
     this.lane4runner = new Lane4Runner
@@ -36,10 +38,13 @@ class Display {
   drawCanvas() {
     var ctx = this.canvas.getContext('2d');
     let img = new Image()
+    let img2 = new Image()
     img.src = ("./assets/Joao.png")
+    img2.src = ("./assets/Joao1.png")
     ctx.beginPath()
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
     ctx.drawImage(img, this.player.x, this.player.y, 100,100 )
+    ctx.drawImage(img2, this.player2.x, this.player2.y, 100,100 )
     ctx.arc(this.lane3runner.x, this.lane3runner.y, 50, 0, 2 * Math.PI);
     ctx.arc(this.lane4runner.x, this.lane4runner.y, 50, 0, 2 * Math.PI);
     ctx.fill()
@@ -50,6 +55,8 @@ class Display {
   trackPlayer() {
     if (this.player.x > 4 && this.player.x < this.finishLine) {
       this.timer.start()
+      clearInterval(this.stopwatch)
+      this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
       display.aiMovement();
     }
     if (this.player.x > this.finishLine) {

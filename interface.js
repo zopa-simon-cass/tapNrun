@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     display.drawCanvas();
     display.infiniteDraw();
     display.controller.enableControls();
+    // display.controller2.enableControls2();
   })
-  document.addEventListener("keydown", display.player.move(), true)
+  // document.addEventListener("keydown", display.player.move(), true)
+  // document.addEventListener("keydown", display.player2.move(), true)
 })

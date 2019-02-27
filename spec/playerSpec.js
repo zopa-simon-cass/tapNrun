@@ -20,6 +20,11 @@ describe("Player", () => {
       expect(tom.x).toEqual(4);
     });
 
+    it("player movement does not change y co-ordinate ", () => {
+      tom.move();
+      expect(tom.y).toEqual(35);
+    });
+
     it("consecutive player movement changes x co-ordinates ", () => {
       tom.move();
       tom.move();
