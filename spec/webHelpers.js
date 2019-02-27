@@ -1,4 +1,4 @@
-var startStop = function () {
-  this.start()
-  this.stop()
-}
+// var startStop = function () {
+//   this.start()
+//   this.stop()
+// }

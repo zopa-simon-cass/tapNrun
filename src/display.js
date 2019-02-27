@@ -18,7 +18,6 @@ class Display {
     this.myAudio = new Audio('./assets/Audio/raceon.mp3');
     this.time1 = null
     this.time2 = null
-    // this.timer.start()
   }
 
   startButton() {
