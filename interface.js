@@ -14,5 +14,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
     display.infiniteDraw();
     display.controller.enableControls();
   })
-  document.addEventListener("keydown", display.player.move(), true)
 })

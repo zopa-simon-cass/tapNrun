@@ -49,6 +49,19 @@ class Display {
     if (this.player.x > this.finishLine) {
       this.timer.stop()
       clearInterval(this.stopwatch);
+      clearInterval(this.interval)
+      this.drawCanvas()
+      this.drawReplay()
     }
   }
+
+  drawReplay() {
+    var ctx = this.canvas.getContext('2d');
+    let img = new Image()
+    img.src = ("./assets/playagain-btn-big.png")
+    img.onload = function() {
+      ctx.drawImage(img, 0, 0, 900, 500)
+    }
+  }
+
 }
