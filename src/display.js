@@ -1,10 +1,9 @@
 class Display {
   constructor() {
     this.canvas = document.querySelector('canvas');
-    this.canvas.width = 900
-    this.canvas.height = 500
     // FINISH LINE NEEDS TO BE MADE ADAPTIVE/ NOT 150
-    this.finishLine = 7.8/9 * this.canvas.width
+
+    this.finishLine = 658
     this.timer = new Timer
     this.player = new Player
     this.player2 = new Player2
@@ -22,11 +21,13 @@ class Display {
   }
 
   startButton() {
+    this.canvas.width = 780
+    this.canvas.height = 470
     var ctx = this.canvas.getContext('2d');
     let img = new Image()
     img.src = ("./assets/pixel-start.jpg")
     img.onload = function() {
-      ctx.drawImage(img, 0, 0, 900, 500)
+      ctx.drawImage(img, 0, 0, 780, 470)
     }
   }
 
@@ -45,6 +46,11 @@ class Display {
       this.play();
     }, false);
     this.myAudio.play();
+    this.canvas.style.backgroundImage = "url('./assets/Background1.png')";
+    this.canvas.backgroundPosition = "50%, 50%";
+    this.canvas.style.backgroundHeight = "100%";
+    this.canvas.style.backgroundWidth = "100%";
+    this.canvas.style.objectFit = "cover";
     var ctx = this.canvas.getContext('2d');
     let img = new Image()
     let img2 = new Image()
