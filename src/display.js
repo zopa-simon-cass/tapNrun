@@ -17,7 +17,6 @@ class Display {
     this.mouseOn = true
     this.time1 = null
     this.time2 = null
-    // this.timer.start()
   }
 
   startButton() {
@@ -77,12 +76,7 @@ class Display {
       this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
     }
   }
-//     if (this.player.x > 4 && this.player.x < this.finishLine) {
-//       this.timer.start()
-//       display.aiMovement();
-//       clearInterval(this.stopwatch)
-//       this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
-//     }
+
 
   trackFinish() {
     if (this.player.x > this.finishLine) {
