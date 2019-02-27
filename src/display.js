@@ -100,6 +100,9 @@ class Display {
 
   restart() {
     this.player.reset()
+    this.player2.reset()
+    this.lane3runner.reset()
+    this.lane4runner.reset()
     this.timer.reset()
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
   }
