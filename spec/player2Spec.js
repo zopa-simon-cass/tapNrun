@@ -24,5 +24,9 @@ describe("Player2", ()=> {
       expect(player.y).toEqual(160);
     })
 
+    it("Player reset changes position back to the start line", () => {
+      player.reset();
+      expect(player.x).toEqual(-8)
+    })
   })
 })

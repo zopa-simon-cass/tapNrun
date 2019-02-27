@@ -5,6 +5,7 @@ describe("Player", () => {
 
     beforeEach(() => {
       tom = new Player();
+      tom.moveAllowed = true;
     })
 
     it("player has x coordinates", () => {
@@ -29,6 +30,11 @@ describe("Player", () => {
       tom.move();
       tom.move();
       expect(tom.x).toEqual(-8);
+    })
+
+    it("Player reset changes position back to the start line", () => {
+      tom.reset();
+      expect(tom.x).toEqual(-8)
     })
   })
 

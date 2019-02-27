@@ -8,4 +8,9 @@ class Lane4Runner {
     this.x += 2;
   }
 
+  reset() {
+    this.x = 50
+    this.y = 450
+  }
+
 }

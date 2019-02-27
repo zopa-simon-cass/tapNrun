@@ -72,9 +72,9 @@ class Display {
 
     if (this.player.x > 3 || this.player2.x > 3) {
       this.timer.start()
+      display.aiMovement();
       clearInterval(this.stopwatch)
       this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
-      display.aiMovement();
     }
   }
 //     if (this.player.x > 4 && this.player.x < this.finishLine) {
@@ -114,6 +114,8 @@ class Display {
   restart() {
     this.player.reset()
     this.player2.reset()
+    this.lane3runner.reset()
+    this.lane4runner.reset()
     this.timer.reset()
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
     this.time1 = null

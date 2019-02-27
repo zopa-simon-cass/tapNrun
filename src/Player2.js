@@ -15,4 +15,9 @@ class Player2 {
     this.x = -8
     this.y = 160
   }
+
+  reset() {
+    this.x = -8
+    this.y = 160
+  }
 }
