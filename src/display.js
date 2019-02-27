@@ -4,14 +4,16 @@ class Display {
     this.canvas.width = 900
     this.canvas.height = 500
     // FINISH LINE NEEDS TO BE MADE ADAPTIVE/ NOT 150
-    this.finishLine = 150
+    this.finishLine = 780
     this.timer = new Timer
     this.player = new Player
     this.player2 = new Player2
     this.controller = new Controller
     this.controller2 = new Controller
     this.interval
-    this.stopwatch = setInterval(this.trackPlayer.bind(this), 10)
+    this.lane3runner = new Lane3Runner
+    this.lane4runner = new Lane4Runner
+    this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
     // this.timer.start()
   }
 
@@ -22,6 +24,11 @@ class Display {
     img.onload = function() {
       ctx.drawImage(img, 0, 0, 900, 500)
     }
+  }
+
+  aiMovement() {
+    this.lane3movement = setInterval(this.lane3runner.move(), 100)
+    this.lane4movement = setInterval(this.lane4runner.move(), 100)
   }
 
   infiniteDraw() {
@@ -38,16 +45,30 @@ class Display {
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
     ctx.drawImage(img, this.player.x, this.player.y, 100,100 )
     ctx.drawImage(img2, this.player2.x, this.player2.y, 100,100 )
+    ctx.arc(this.lane3runner.x, this.lane3runner.y, 50, 0, 2 * Math.PI);
+    ctx.arc(this.lane4runner.x, this.lane4runner.y, 50, 0, 2 * Math.PI);
+    ctx.fill()
     ctx.font = "30px sans-serif";
     ctx.fillText(this.timer.formatTime(), 745, 490)
   }
 
   trackPlayer() {
-    if (this.player.x > 15 && this.player.x < 20) {
+    if (this.player.x > 4 && this.player.x < this.finishLine) {
       this.timer.start()
       clearInterval(this.stopwatch)
       this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
+      display.aiMovement();
     }
+    if (this.player.x > this.finishLine) {
+      this.timer.stop()
+      clearInterval(this.stopwatch);
+    }
+//     if (this.player.x > 4 && this.player.x < this.finishLine) {
+//       this.timer.start()
+//       display.aiMovement();
+//       clearInterval(this.stopwatch)
+//       this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
+//     }
   }
 
   trackFinish() {
