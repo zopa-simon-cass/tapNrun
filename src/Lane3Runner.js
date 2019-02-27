@@ -1,7 +1,7 @@
 class Lane3Runner {
   constructor() {
-    this.x = -8
-    this.y = 310
+    this.x = 50
+    this.y = 332
   }
 
   move() {

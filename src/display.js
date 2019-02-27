@@ -7,6 +7,8 @@ class Display {
     this.finishLine = 150
     this.timer = new Timer
     this.player = new Player
+    this.lane3runner = new Lane3Runner
+    this.lane4runner = new Lane4Runner
     this.controller = new Controller
     this.interval
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
@@ -33,6 +35,9 @@ class Display {
     ctx.beginPath()
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
     ctx.drawImage(img, this.player.x, this.player.y, 100,100 )
+    ctx.arc(this.lane3runner.x, this.lane3runner.y, 50, 0, 2 * Math.PI);
+    ctx.arc(this.lane4runner.x, this.lane4runner.y, 50, 0, 2 * Math.PI);
+    ctx.fill()
     ctx.font = "30px sans-serif";
     ctx.fillText(this.timer.formatTime(), 745, 490)
   }
