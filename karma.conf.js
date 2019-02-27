@@ -6,7 +6,9 @@ module.exports = function(config) {
       'spec/gameSpec.js',
       'spec/movementSpec.js',
       'spec/playerSpec.js',
-      'spec/timerSpec.js'
+      'spec/timerSpec.js',
+      'spec/lane3RunnerSpec.js',
+      'spec/lane4RunnerSpec.js'
     ],
 
     // coverage reporter generates the coverage
