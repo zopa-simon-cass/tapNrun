@@ -4,7 +4,7 @@ class Display {
     this.canvas.width = 900
     this.canvas.height = 500
     // FINISH LINE NEEDS TO BE MADE ADAPTIVE/ NOT 150
-    this.finishLine = 150
+    this.finishLine = 780
     this.timer = new Timer
     this.player = new Player
     this.controller = new Controller
@@ -48,15 +48,18 @@ class Display {
   }
 
   trackPlayer() {
-    if (this.player.x > 4 && this.player.x < this.finishLine) {
+    if (this.player.x > 15 && this.player.x < 20) {
       this.timer.start()
       display.aiMovement();
+      clearInterval(this.stopwatch)
+      this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
     }
+  }
+
+  trackFinish() {
     if (this.player.x > this.finishLine) {
       this.timer.stop()
       clearInterval(this.stopwatch);
     }
-    // this.trackPlayer()
   }
-
 }

@@ -1,7 +1,5 @@
 describe("Display", () => {
 
-  describe("Player class", () => {
-
     beforeEach(() => {
       display = new Display
       // player = new Player
@@ -21,6 +19,7 @@ describe("Display", () => {
 
 
   });
+
 
 
 });

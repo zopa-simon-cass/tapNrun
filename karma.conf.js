@@ -4,11 +4,13 @@ module.exports = function(config) {
       'src/*.js',
       'spec/featureSpec.js',
       'spec/gameSpec.js',
-      'spec/movementSpec.js',
+      'spec/buttonSpec.js',
       'spec/playerSpec.js',
       'spec/timerSpec.js',
       'spec/lane3RunnerSpec.js',
       'spec/lane4RunnerSpec.js'
+      'spec/controllerSpec.js'
+
     ],
 
     // coverage reporter generates the coverage
