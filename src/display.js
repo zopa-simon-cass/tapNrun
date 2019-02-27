@@ -15,6 +15,7 @@ class Display {
     this.lane4runner = new Lane4Runner
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
     this.mouseOn = true
+    this.myAudio = new Audio('./assets/Audio/raceon.mp3');
     // this.timer.start()
   }
 
@@ -37,6 +38,11 @@ class Display {
   }
 
   drawCanvas() {
+    this.myAudio.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    this.myAudio.play();
     var ctx = this.canvas.getContext('2d');
     let img = new Image()
     let img2 = new Image()
@@ -68,12 +74,12 @@ class Display {
       this.timer.stop()
       clearInterval(this.stopwatch);
     }
-//     if (this.player.x > 4 && this.player.x < this.finishLine) {
-//       this.timer.start()
-//       display.aiMovement();
-//       clearInterval(this.stopwatch)
-//       this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
-//     }
+    //     if (this.player.x > 4 && this.player.x < this.finishLine) {
+    //       this.timer.start()
+    //       display.aiMovement();
+    //       clearInterval(this.stopwatch)
+    //       this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
+    //     }
   }
 
   trackFinish() {
