@@ -14,5 +14,15 @@ describe("Player2", ()=> {
       expect(player.y).toEqual(jasmine.any(Number))
     })
 
+    it("player movement changes x co-ordinates ", () => {
+      player.move();
+      expect(player.x).toEqual(4);
+    })
+
+    it("player movement does not change y co-ordinate ", () => {
+      tom.move();
+      expect(player.y).toEqual(50);
+    })
+
   })
 })
