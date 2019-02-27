@@ -10,6 +10,7 @@ class Display {
     this.controller = new Controller
     this.interval
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
+    this.mouseOn = true
     // this.timer.start()
   }
 
@@ -35,6 +36,7 @@ class Display {
     ctx.drawImage(img, this.player.x, this.player.y, 100,100 )
     ctx.font = "30px sans-serif";
     ctx.fillText(this.timer.formatTime(), 745, 490)
+    this.mouseOn = false
   }
 
   trackPlayer() {
@@ -51,6 +53,7 @@ class Display {
       clearInterval(this.stopwatch);
       clearInterval(this.interval)
       this.drawCanvas()
+      this.mouseOn = true
       this.drawReplay()
     }
   }

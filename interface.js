@@ -7,12 +7,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   display = new Display();
-  display.startButton()
+  display.startButton();
 
   display.canvas.addEventListener("mousedown", function () {
-    display.drawCanvas();
-    display.infiniteDraw();
-    display.player.moveAllowed = true;
-    display.controller.enableControls();
+    if (display.mouseOn === true) {
+      display.drawCanvas();
+      display.infiniteDraw();
+      display.player.moveAllowed = true;
+      display.controller.enableControls();
+    }
   })
 })
