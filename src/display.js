@@ -13,11 +13,15 @@ class Display {
     this.interval
     this.lane3runner = new Lane3Runner
     this.lane4runner = new Lane4Runner
-    this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
+    this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
     this.mouseOn = true
     this.myAudio = new Audio('./assets/Audio/raceon.mp3');
     this.time1 = null
     this.time2 = null
+    this.countTimer
+    this.count = 3
+    this.doCount = false
+    // this.timer.start()
   }
 
   startButton() {
@@ -71,27 +75,10 @@ class Display {
     } else if (this.player2.x > this.finishLine) {
       ctx.fillText(this.time2, 650, 220)
     }
-  }
-
-  trackPlayer() {
-
-    if (this.player.x > 3 || this.player2.x > 3) {
-      this.timer.start()
-      display.aiMovement();
-      clearInterval(this.stopwatch)
-      this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
+    ctx.font = "130px sans-serif";
+    if (this.doCount === true) {
+      ctx.fillText(this.count + 1, 450, 250)
     }
-
-    if (this.player.x > this.finishLine) {
-      this.timer.stop()
-      clearInterval(this.stopwatch);
-    }
-    //     if (this.player.x > 4 && this.player.x < this.finishLine) {
-    //       this.timer.start()
-    //       display.aiMovement();
-    //       clearInterval(this.stopwatch)
-    //       this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
-    //     }
   }
 
   trackFinish() {
@@ -127,9 +114,26 @@ class Display {
     this.lane3runner.reset()
     this.lane4runner.reset()
     this.timer.reset()
-    this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
     this.time1 = null
     this.time2 = null
+    this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
   }
 
+  countdown() {
+    if (this.count != 0) {
+      this.doCount = true
+      this.count -= 1
+    } else if(this.count === 0) {
+      clearInterval(this.countTimer)
+      this.count -= 1
+      display.player.moveAllowed = true;
+      display.player2.moveAllowed = true;
+      this.timer.start()
+      this.doCount = false
+    }
+  }
+
+  startCountdown() {
+    this.countTimer = setInterval(this.countdown.bind(this), 1000)
+  }
 }

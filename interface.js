@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   display.canvas.addEventListener("mousedown", function () {
     if (display.mouseOn === true) {
+      display.count = 3
+      display.startCountdown();
       display.drawCanvas();
       display.infiniteDraw();
-      display.player.moveAllowed = true;
-      display.player2.moveAllowed = true;
       display.controller.enableControls();
     }
   })
