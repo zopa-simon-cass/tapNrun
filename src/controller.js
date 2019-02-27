@@ -8,19 +8,12 @@ class Controller {
     this.canvas.onkeyup = function(e) {
       if(e.keyCode == 65) {
         display.player.move()
-      } else {
+      }
+      if(e.keyCode == 76) {
         display.player2.move()
       }
     }
   }
 
-  // enableControls2() {
-  //   this.canvas.onkeyup = function(e) {
-  //     if(e.keycode == 76) {
-  //       display.player2.move()
-  //       // this.controllerEnabled = true
-  //     }
-  //   }
-  // }
 
 }
