@@ -14,14 +14,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   display = new Display();
-  display.startButton()
+  display.startButton();
 
   display.canvas.addEventListener("mousedown", function () {
-    display.drawCanvas();
-    display.infiniteDraw();
-    display.controller.enableControls();
-    // display.controller2.enableControls2();
+    if (display.mouseOn === true) {
+      display.drawCanvas();
+      display.infiniteDraw();
+      display.player.moveAllowed = true;
+      display.controller.enableControls();
+    }
   })
-  // document.addEventListener("keydown", display.player.move(), true)
-  // document.addEventListener("keydown", display.player2.move(), true)
+
 })
