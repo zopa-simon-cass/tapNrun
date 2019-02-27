@@ -1,16 +1,26 @@
 class Controller {
   constructor() {
     this.canvas = document.querySelector("canvas");
-    this.controllerEnabled = false
+    // this.controllerEnabled = false
   }
 
   enableControls() {
     this.canvas.onkeyup = function(e) {
-      if(e.keyCode == 32) {
+      if(e.keyCode == 65) {
         display.player.move()
-        this.controllerEnabled = true
+      } else {
+        display.player2.move()
       }
     }
   }
+
+  // enableControls2() {
+  //   this.canvas.onkeyup = function(e) {
+  //     if(e.keycode == 76) {
+  //       display.player2.move()
+  //       // this.controllerEnabled = true
+  //     }
+  //   }
+  // }
 
 }
