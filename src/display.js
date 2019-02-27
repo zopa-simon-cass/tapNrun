@@ -53,7 +53,9 @@ class Display {
   }
 
   trackPlayer() {
-    if (this.player.x > 4 && this.player.x < this.finishLine) {
+    var player1Position = this.player.x > 4 && this.player.x < this.finishLine
+    var player2Position = this.player2.x > 4 && this.player2.x < this.finishLine
+    if (player1Position || player2Position) {
       this.timer.start()
       clearInterval(this.stopwatch)
       this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
@@ -72,7 +74,7 @@ class Display {
   }
 
   trackFinish() {
-    if (this.player.x > this.finishLine) {
+    if (this.player.x > this.finishLine || this.player2.x > this.finishLine) {
       this.timer.stop()
       clearInterval(this.stopwatch);
     }
