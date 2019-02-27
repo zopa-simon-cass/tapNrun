@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   display.canvas.addEventListener("mousedown", function () {
     display.drawCanvas();
     display.infiniteDraw();
+    display.player.moveAllowed = true;
     display.controller.enableControls();
   })
 })

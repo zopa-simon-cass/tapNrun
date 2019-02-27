@@ -2,10 +2,13 @@ class Player {
   constructor() {
     this.x = -8
     this.y = 35
+    this.moveAllowed = false
   }
 
   move() {
-    this.x += 50;
+    if (this.moveAllowed === true) {
+      this.x += 50;
+    }
   }
 
   reset() {

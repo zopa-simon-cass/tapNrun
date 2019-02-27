@@ -63,6 +63,7 @@ class Display {
       ctx.drawImage(img, 225, 125, 450, 250)
     }
     this.player.reset()
+    this.player.moveAllowed = false
     this.timer.reset()
   }
 
