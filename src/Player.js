@@ -8,4 +8,9 @@ class Player {
     this.x += 50;
   }
 
+  reset() {
+    this.x = -8
+    this.y = 35
+  }
+
 }

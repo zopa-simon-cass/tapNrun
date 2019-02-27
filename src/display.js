@@ -4,7 +4,7 @@ class Display {
     this.canvas.width = 900
     this.canvas.height = 500
     // FINISH LINE NEEDS TO BE MADE ADAPTIVE/ NOT 150
-    this.finishLine = 780
+    this.finishLine = 7.8/9 * this.canvas.width
     this.timer = new Timer
     this.player = new Player
     this.controller = new Controller
@@ -62,6 +62,8 @@ class Display {
     img.onload = function() {
       ctx.drawImage(img, 225, 125, 450, 250)
     }
+    this.player.reset()
+    this.timer.reset()
   }
 
 }
