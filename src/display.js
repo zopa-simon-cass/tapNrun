@@ -51,9 +51,17 @@ class Display {
     if (this.player.x > 4 && this.player.x < this.finishLine) {
       this.timer.start()
       display.aiMovement();
-      clearInterval(this.stopwatch)
-      this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
     }
+    if (this.player.x > this.finishLine) {
+      this.timer.stop()
+      clearInterval(this.stopwatch);
+    }
+//     if (this.player.x > 4 && this.player.x < this.finishLine) {
+//       this.timer.start()
+//       display.aiMovement();
+//       clearInterval(this.stopwatch)
+//       this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
+//     }
   }
 
   trackFinish() {
