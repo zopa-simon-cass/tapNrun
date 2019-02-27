@@ -8,7 +8,7 @@ module.exports = function(config) {
       'spec/playerSpec.js',
       'spec/timerSpec.js',
       'spec/lane3RunnerSpec.js',
-      'spec/lane4RunnerSpec.js'
+      'spec/lane4RunnerSpec.js',
       'spec/controllerSpec.js'
 
     ],
