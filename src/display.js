@@ -7,10 +7,10 @@ class Display {
     this.finishLine = 150
     this.timer = new Timer
     this.player = new Player
-    this.lane3runner = new Lane3Runner
-    this.lane4runner = new Lane4Runner
     this.controller = new Controller
     this.interval
+    this.lane3runner = new Lane3Runner
+    this.lane4runner = new Lane4Runner
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
     // this.timer.start()
   }
@@ -22,6 +22,11 @@ class Display {
     img.onload = function() {
       ctx.drawImage(img, 0, 0, 900, 500)
     }
+  }
+
+  aiMovement() {
+    this.lane3movement = setInterval(this.lane3runner.move(), 100)
+    this.lane4movement = setInterval(this.lane4runner.move(), 100)
   }
 
   infiniteDraw() {
@@ -45,6 +50,7 @@ class Display {
   trackPlayer() {
     if (this.player.x > 4 && this.player.x < this.finishLine) {
       this.timer.start()
+      display.aiMovement();
     }
     if (this.player.x > this.finishLine) {
       this.timer.stop()

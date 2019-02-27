@@ -5,7 +5,7 @@ class Lane3Runner {
   }
 
   move() {
-    this.x += 5;
+    this.x += 3.4;
   }
 
 }
