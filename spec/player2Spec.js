@@ -3,7 +3,7 @@ describe("Player2", ()=> {
   describe("x and y ctx coordinates", () => {
 
     beforeEach(() => {
-      player = new Player2
+      player = new Player2();
     })
 
     it("player2 has x coordinates", () => {
@@ -20,7 +20,7 @@ describe("Player2", ()=> {
     })
 
     it("player movement does not change y co-ordinate ", () => {
-      tom.move();
+      player.move();
       expect(player.y).toEqual(50);
     })
 

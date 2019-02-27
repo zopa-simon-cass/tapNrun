@@ -15,7 +15,3 @@ describe("Display", () => {
 
 
   });
-
-
-
-});
