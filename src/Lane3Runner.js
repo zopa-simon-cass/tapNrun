@@ -2,10 +2,13 @@ class Lane3Runner {
   constructor() {
     this.x = 50
     this.y = 332
+    this.moveAllowed = false
   }
 
   move() {
-    this.x += 3.4;
+    if (this.moveAllowed === true) {
+    this.x += 0.98;
+    }
   }
 
   reset() {
