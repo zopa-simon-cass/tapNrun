@@ -38,7 +38,7 @@ class Display {
   }
 
   trackPlayer() {
-    if (this.player.x > 15 && this.player.x < 20) {
+    if (this.player.x > 15) {
       this.timer.start()
       clearInterval(this.stopwatch)
       this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
@@ -60,7 +60,7 @@ class Display {
     let img = new Image()
     img.src = ("./assets/playagain-btn-big.png")
     img.onload = function() {
-      ctx.drawImage(img, 0, 0, 900, 500)
+      ctx.drawImage(img, 225, 125, 450, 250)
     }
   }
 
