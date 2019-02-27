@@ -4,7 +4,7 @@ class Display {
     this.canvas.width = 900
     this.canvas.height = 500
     // FINISH LINE NEEDS TO BE MADE ADAPTIVE/ NOT 150
-    this.finishLine = 150
+    this.finishLine = 780
     this.timer = new Timer
     this.player = new Player
     this.controller = new Controller
