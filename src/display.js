@@ -9,8 +9,7 @@ class Display {
     this.player = new Player
     this.controller = new Controller
     this.interval
-    this.stopwatch = setInterval(this.trackPlayer.bind(this), 10)
-    // this.infiniteDraw()
+    this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
     // this.timer.start()
   }
 
@@ -29,24 +28,27 @@ class Display {
 
   drawCanvas() {
     var ctx = this.canvas.getContext('2d');
-    ctx.beginPath();
+    let img = new Image()
+    img.src = ("./assets/Joao.png")
+    ctx.beginPath()
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    ctx.arc(this.player.x, this.player.y, 50, 0, 2 * Math.PI);
-    ctx.fill()
-    ctx.font = "30px sans-serif"
-    // LINE BELOW WILL START TIMER, WILL SOON BE MOVED TO MENU CLASS
-    ctx.fillText(this.timer.formatTime(), 700, 450)
+    ctx.drawImage(img, this.player.x, this.player.y, 100,100 )
+    ctx.font = "30px sans-serif";
+    ctx.fillText(this.timer.formatTime(), 745, 490)
   }
 
   trackPlayer() {
-    if (this.player.x > 105 && this.player.x < this.finishLine) {
+    if (this.player.x > 15 && this.player.x < 20) {
       this.timer.start()
+      clearInterval(this.stopwatch)
+      this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
     }
+  }
+
+  trackFinish() {
     if (this.player.x > this.finishLine) {
       this.timer.stop()
       clearInterval(this.stopwatch);
     }
-    // this.trackPlayer()
   }
-
 }
