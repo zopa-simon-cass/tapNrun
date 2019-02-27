@@ -15,6 +15,7 @@ class Display {
     this.lane4runner = new Lane4Runner
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
     this.mouseOn = true
+    this.countTimer = setInterval(this.countdown.bind(this), 1000)
     // this.timer.start()
   }
 
@@ -102,6 +103,21 @@ class Display {
     this.player.reset()
     this.timer.reset()
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
+  }
+
+  countdown() {
+    var count = 3
+    this.countTimer
+    while (count != 0) {
+      count--;
+      if(count === 0) {
+        clearInterval(this.countTimer)
+        this.timer.start()
+
+      }
+      console.log(count);
+    }
+
   }
 
 }

@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   display.canvas.addEventListener("mousedown", function () {
     if (display.mouseOn === true) {
+      display.countdown()
       display.drawCanvas();
       display.infiniteDraw();
       display.player.moveAllowed = true;
