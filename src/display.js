@@ -15,6 +15,8 @@ class Display {
     this.lane4runner = new Lane4Runner
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
     this.mouseOn = true
+    this.time1 = null
+    this.time2 = null
     // this.timer.start()
   }
 
@@ -52,32 +54,44 @@ class Display {
     ctx.font = "30px sans-serif";
     ctx.fillText(this.timer.formatTime(), 745, 490)
     this.mouseOn = false
+    if (this.player.x > this.finishLine && this.time1=== null) {
+      this.time1 = this.timer.formatTime()
+      ctx.fillText(this.time1, 650, 95)
+    } else if (this.player.x > this.finishLine) {
+      ctx.fillText(this.time1, 650, 95)
+    }
+    if (this.player2.x > this.finishLine && this.time2 === null) {
+      this.time2 = this.timer.formatTime()
+      ctx.fillText(this.time2, 650, 220)
+    } else if (this.player2.x > this.finishLine) {
+      ctx.fillText(this.time2, 650, 220)
+    }
   }
 
   trackPlayer() {
 
-    var player1Position = this.player.x > 4 //&& this.player.x < this.finishLine
-    var player2Position = this.player2.x > 4 //&& this.player2.x < this.finishLine
-    if (player1Position || player2Position) {
+    if (this.player.x > 3 || this.player2.x > 3) {
       this.timer.start()
       display.aiMovement();
       clearInterval(this.stopwatch)
       this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
     }
-    if (this.player.x > this.finishLine) {
-      this.timer.stop()
-      clearInterval(this.stopwatch);
-    }
+  }
 //     if (this.player.x > 4 && this.player.x < this.finishLine) {
 //       this.timer.start()
 //       display.aiMovement();
 //       clearInterval(this.stopwatch)
 //       this.stopwatch = setInterval(this.trackFinish.bind(this), 50)
 //     }
-  }
 
   trackFinish() {
-    if (this.player.x > this.finishLine || this.player2.x > this.finishLine) {
+    if (this.player.x > this.finishLine) {
+      this.player.moveAllowed = false
+    }
+    if (this.player2.x > this.finishLine && this.player2.moveAllowed === true) {
+      this.player2.moveAllowed = false
+    }
+    if (this.player.x > this.finishLine && this.player2.x > this.finishLine) {
       this.timer.stop()
       clearInterval(this.stopwatch);
       clearInterval(this.interval)
@@ -94,7 +108,6 @@ class Display {
     img.onload = function() {
       ctx.drawImage(img, 225, 125, 450, 250)
     }
-    this.player.moveAllowed = false
     this.restart()
   }
 
@@ -105,6 +118,8 @@ class Display {
     this.lane4runner.reset()
     this.timer.reset()
     this.stopwatch = setInterval(this.trackPlayer.bind(this), 50)
+    this.time1 = null
+    this.time2 = null
   }
 
 }
