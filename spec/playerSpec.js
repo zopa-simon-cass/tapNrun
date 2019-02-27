@@ -18,7 +18,7 @@ describe("Player", () => {
 
     it("player movement changes x co-ordinates ", () => {
       tom.move();
-      expect(tom.x).toEqual(4);
+      expect(tom.x).toEqual(-8);
     });
 
     it("player movement does not change y co-ordinate ", () => {
@@ -29,7 +29,7 @@ describe("Player", () => {
     it("consecutive player movement changes x co-ordinates ", () => {
       tom.move();
       tom.move();
-      expect(tom.x).toEqual(16);
+      expect(tom.x).toEqual(-8);
     })
 
     it("Player reset changes position back to the start line", () => {
