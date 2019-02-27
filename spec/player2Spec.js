@@ -21,7 +21,7 @@ describe("Player2", ()=> {
 
     it("player movement does not change y co-ordinate ", () => {
       player.move();
-      expect(player.y).toEqual(50);
+      expect(player.y).toEqual(160);
     })
 
   })

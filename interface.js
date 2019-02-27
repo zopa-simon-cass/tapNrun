@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   display.canvas.addEventListener("mousedown", function () {
     display.drawCanvas();
+    // display.drawCanvas2();
     display.infiniteDraw();
     display.controller.enableControls();
   })
