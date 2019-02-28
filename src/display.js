@@ -5,10 +5,10 @@ class Display {
     this.canvas.height = 420
     this.startline = -20
     this.timer = new Timer
-    this.player = new Player(this.startline, 23, 12)
+    this.player = new Player(this.startline, 22, 12)
     this.player2 = new Player(this.startline, 120, 12)
-    this.lane3runner = new Player(50, 332, 0.98)
-    this.lane4runner = new Player(50, 450, 0.7)
+    this.lane3runner = new Player(this.startline, 217, 0.7)
+    this.lane4runner = new Player(this.startline, 313, 0.98)
     this.controller = new Controller(this.player, this.player2, this.lane3runner, this.lane4runner, this.timer)
     this.interval
     this.myAudio = new Audio('./assets/Audio/raceon.mp3');
@@ -22,7 +22,7 @@ class Display {
     let img = new Image()
     img.src = ("./assets/pixel-start.jpg")
     img.onload = function() {
-      ctx.drawImage(img, 0, 0, 900, 500)
+      ctx.drawImage(img, 0, 0, ctx.canvas.width, ctx.canvas.height)
     }
   }
 
@@ -44,8 +44,8 @@ class Display {
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
     ctx.drawImage(img1, this.player.x, this.player.y, 85, 85)
     ctx.drawImage(img2, this.player2.x, this.player2.y, 85, 85)
-    ctx.arc(this.lane3runner.x, this.lane3runner.y, 40, 0, 2 * Math.PI);
-    ctx.arc(this.lane4runner.x, this.lane4runner.y, 40, 0, 2 * Math.PI);
+    ctx.rect(this.lane3runner.x, this.lane3runner.y, 85, 85);
+    ctx.rect(this.lane4runner.x, this.lane4runner.y, 85, 85 );
     ctx.fill()
   }
 
