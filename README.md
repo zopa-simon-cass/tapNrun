@@ -1,6 +1,6 @@
 # tapNrun
 
-tapNrun is a game created for our Makers Academy final project. 
+tapNrun is a sports based game that we have created for our Makers Academy final project.  This game has been built using Javascript and HTML canvas and is hosted on Github pages.
 
 ## Getting Started
 1. Clone this repository `git clone git@github.com:scass91/tapNrun.git`
@@ -10,7 +10,18 @@ tapNrun is a game created for our Makers Academy final project.
 
 ## Instructions for playing tapNrun
 
+The goal of tapNrun is to reach the finish line of the 100m track in the fastest time possible!
 
+If you are player 1:
+* You will be positioned in lane 1 of the race track.
+* In order to move, tap the key 'a' repeatedly. The faster you tap the key, the faster you will move.
+
+If you are player 2:
+* You will be positioned in lane 2 of the race track.
+* In order to move, tap the key 'l' repeatedly. The faster you tap the key, the faster you will move.
+
+There are two automated players in lane 3 and 4. Do not be deceived! These players are extremely speedy.
+There will be a three second countdown before the game begins.
 
 ## User Stories
 
