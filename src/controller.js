@@ -6,7 +6,7 @@ class Controller {
     this.l3 = l3
     this.l4 = l4
     this.timer = timer
-    this.finishLine = 605
+    this.finishLine = 603
     this.stopwatch = setInterval(this.stopAtFinish.bind(this), 10)
     this.mouseOn = true
   }
@@ -47,10 +47,10 @@ class Controller {
   }
 
   restart() {
-    this.p1.reset(display.startline,35)
-    this.p2.reset(-8, 160)
-    this.l3.reset(50, 332)
-    this.l4.reset(50, 450)
+    this.p1.reset(display.startline, 22)
+    this.p2.reset(display.startline, 120)
+    this.l3.reset(display.startline, 217)
+    this.l4.reset(display.startline, 313)
     this.timer.reset()
     display.time1 = null
     display.time2 = null
