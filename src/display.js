@@ -6,13 +6,13 @@ class Display {
     // FINISH LINE NEEDS TO BE MADE ADAPTIVE/ NOT 150
     this.finishLine = 7.8/9 * this.canvas.width
     this.timer = new Timer
-    this.player = new Player(35)
-    this.player2 = new Player(160)
+    this.player = new Player(-8, 35, 12)
+    this.player2 = new Player(-8, 160, 12)
     this.controller = new Controller
     this.controller2 = new Controller
     this.interval
-    this.lane3runner = new Lane3Runner
-    this.lane4runner = new Lane4Runner
+    this.lane3runner = new Player(50, 332, 0.98)
+    this.lane4runner = new Player(50, 450, 0.7)
     this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
     this.mouseOn = true
     this.myAudio = new Audio('./assets/Audio/raceon.mp3');
@@ -122,10 +122,10 @@ class Display {
   }
 
   restart() {
-    this.player.reset(35)
-    this.player2.reset(160)
-    this.lane3runner.reset()
-    this.lane4runner.reset()
+    this.player.reset(-8, 35)
+    this.player2.reset(-8, 160)
+    this.lane3runner.reset(50, 332)
+    this.lane4runner.reset(50, 450)
     this.timer.reset()
     this.time1 = null
     this.time2 = null
