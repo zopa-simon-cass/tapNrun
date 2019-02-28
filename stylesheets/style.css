@@ -14,17 +14,6 @@ h1 {
   font-size: 65px;
 }
 
-@keyframes example {
-  from {background-color: red;}
-  to {background-color: yellow;}
-}
-
-#title span {
-  animation-name: bounce;
-  color: #EE1D1D;
-  font-size: 80px;
-}
-
 #standings {
   position: fixed;
   align-items: center;

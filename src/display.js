@@ -1,11 +1,12 @@
 class Display {
   constructor() {
     this.canvas = document.querySelector('canvas');
-    this.canvas.width = 900
-    this.canvas.height = 500
+    this.canvas.width = 750
+    this.canvas.height = 420
+    this.startline = -30
     this.timer = new Timer
-    this.player = new Player(-8, 35, 12)
-    this.player2 = new Player(-8, 160, 12)
+    this.player = new Player(this.startline, 15, 12)
+    this.player2 = new Player(this.startline, 160, 12)
     this.lane3runner = new Player(50, 332, 0.98)
     this.lane4runner = new Player(50, 450, 0.7)
     this.controller = new Controller(this.player, this.player2, this.lane3runner, this.lane4runner, this.timer)
@@ -41,8 +42,8 @@ class Display {
     var ctx = this.canvas.getContext('2d')
     ctx.beginPath()
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    ctx.drawImage(img1, this.player.x, this.player.y, 100, 100)
-    ctx.drawImage(img2, this.player2.x, this.player2.y, 100, 100)
+    ctx.drawImage(img1, this.player.x, this.player.y, 85, 85)
+    ctx.drawImage(img2, this.player2.x, this.player2.y, 85, 85)
     ctx.arc(this.lane3runner.x, this.lane3runner.y, 40, 0, 2 * Math.PI);
     ctx.arc(this.lane4runner.x, this.lane4runner.y, 40, 0, 2 * Math.PI);
     ctx.fill()
