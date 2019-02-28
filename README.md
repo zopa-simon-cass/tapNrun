@@ -1,27 +1,12 @@
 # tapNrun - Makers Academy Final Project
 
 
-
 ## Getting Started
 
-* Clone this repository
-```
-$ git clone git@github.com:scass91/tapNrun.git
-```
-* Go into the tapNrun repository
-```
-$ cd tapNrun
-```
-* Run npm to install dependencies
-```
-$ npm install
-```
-* Run the game
-```
-$ open -a "Google Chrome" index.html
-```
-
-
+1. Clone this repository `git clone git@github.com:scass91/tapNrun.git`
+2. Change into directory `cd tapNrun`
+3. run npm to install dependencies `npm install`
+4. Run the game `open -a "Google Chrome" index.html`
 
 ## Testing
 
