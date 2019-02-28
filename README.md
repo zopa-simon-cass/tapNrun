@@ -1,5 +1,6 @@
-# tapNrun 
+# tapNrun
 
+tapNrun is a game created for our Makers Academy final project. 
 
 ## Getting Started
 1. Clone this repository `git clone git@github.com:scass91/tapNrun.git`
@@ -7,40 +8,44 @@
 3. run npm to install dependencies `npm install`
 4. Run the game `open -a "Google Chrome" index.html`
 
+## Instructions for playing tapNrun
+
+
+
 ## User Stories
 
 ```
 As a user,
 So that I can be identified,
-I can enter my name before starting the game.
+I would like to enter my name before starting the game.
 
 As a user,
 So that I can play against another user,
-Two players can play simultaneously.
+I would like two players to play simultaneously.
 
 As a user,
 So that I can start playing the game,
-I can click on the start button.
+I would like to click on the start button.
 
 As a user,
 So that I can see who is playing,
-The lanes and associated player names appear bellow the track.
+I would like the lanes and associated player names to appear bellow the track.
 
 As a user,
 So that I am ready to play the game,
-I don't start racing until the 321 countdown is complete.
+I don't want to start racing until the 321 countdown is complete.
 
 As a user,
 So that my player can move across the track,
-I can click on either 'a' or 'l' keys to move my player.
+I would like to be able click a key to move my player.
 
 As a user,
 So that I know my time,
-My race time appears when I cross the finish line.
+I would like my race time to appear when I cross the finish line.
 
 As a user,
 So that I can replay the game,
-I can click on the 'Play again' button to restart.
+I would like to click on the 'Play again' button to restart.
 
 ```
 ## Testing
