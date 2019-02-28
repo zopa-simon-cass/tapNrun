@@ -54,6 +54,8 @@ class Controller {
     this.timer.reset()
     display.time1 = null
     display.time2 = null
+    display.time3 = null
+    display.time4 = null
     this.stopwatch = setInterval(this.stopAtFinish.bind(this), 10)
   }
 
