@@ -21,7 +21,11 @@ If you are player 2:
 * In order to move, tap the key 'l' repeatedly. The faster you tap the key, the faster you will move.
 
 There are two automated players in lane 3 and 4. Do not be deceived! These players are extremely speedy.
-There will be a three second countdown before the game begins.
+In addition, there will be a three second countdown before the game begins.
+
+## Health Warning
+
+Due to the addictive nature of the game, be aware of contractive repetitive strain injury (RSI) from tap tap tappin' ;)
 
 ## User Stories
 
