@@ -46,12 +46,9 @@ I can click on the 'Play again' button to restart.
 
 ```
 
-
-
-
 ## Testing
 
-1. Run tests with Jasmine `open -a "Google Chrome" SpecRunner.html`
+1. Run tests with the testing framework Jasmine `open -a "Google Chrome" SpecRunner.html`
 2. Alternatively tests can be ran in Terminal using Karma `npm test`
 
 ## Code coverage
@@ -61,12 +58,12 @@ I can click on the 'Play again' button to restart.
 3. Start Karma - tests will show in terminal, a window will open in Google Chrome `karma start`
 4. Press control-c to close the tests within terminal `ctrl-c`
 
-Deployment
+## Deployment
 ---
-Our game is hosted on Github pages. (Tap N' Run)[https://scass91.github.io/tapNrun]
+Our game is hosted on Github pages. [Tap N' Run](https://scass91.github.io/tapNrun)
 
-Technologies
----
+## Technologies
+
 * Javascript
 * HTML5/Canvas
 * Canvas
@@ -74,13 +71,24 @@ Technologies
 * Jasmine
 * Google Draw
 * Microsoft Word
+## Technologies used
+
+Tech | Description
+------------- | -------------
+[Javascript](https://www.javascript.com/) | Main language used
+[Travis CI](https://travis-ci.org/) | Continuous integration running tests and linters before merging branches
+[Trello](https://trello.com/) | Tracking and organising workflow
+[Karma](https://karma-runner.github.io/latest/index.html) | Javascript test runner
+[Jasmine](https://jasmine.github.io) | Javascript testing framework
+[Github pages](https://pages.github.com/) | Deployment
+[Google draw](https://quickdraw.withgoogle.com/) | 
 
 
-Contributors
-----
+## Contributors
+
 This game was built with contributions from
-(Simon Cass)[https://github.com/scass91]
-(Tom Russell)[https://github.com/tomlovesgithub]
-(Subomi Onanuga)[https://github.com/subomionanuga]
-(Jacques Laffy)[https://github.com/jlaffbabs]
-(Beatrice Courage)[https://github.com/beacourage]
+* [Simon Cass](https://github.com/scass91)
+* [Tom Russell](https://github.com/tomlovesgithub)
+* [Subomi Onanuga](https://github.com/subomionanuga)
+* [Jacques Laffy](https://github.com/jlaffbabs)
+* [Beatrice Courage](https://github.com/beacourage)
