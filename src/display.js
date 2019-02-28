@@ -66,10 +66,10 @@ class Display {
   finishTimeShow() {
     var ctx = this.canvas.getContext('2d')
     this.finishTimeCalc()
-    if (this.time1 != null) { ctx.fillText(this.time1, 500, (this.player.y + 43)) }
-    if (this.time2 != null) { ctx.fillText(this.time2, 500, 220) }
-    if (this.lane3runner.x > this.controller.finishLine) { ctx.fillText("00:08:110", 500, 340) }
-    if (this.lane4runner.x > this.controller.finishLine) { ctx.fillText("00:11:352", 500, 460) }
+    if (this.time1 != null) { ctx.fillText(this.time1, 450, 70) }
+    if (this.time2 != null) { ctx.fillText(this.time2, 450, 170) }
+    if (this.lane3runner.x > this.controller.finishLine) { ctx.fillText("00:08:110", 450, 270) }
+    if (this.lane4runner.x > this.controller.finishLine) { ctx.fillText("00:11:352", 450, 370) }
   }
 
   finishTimeCalc() {
@@ -85,7 +85,7 @@ class Display {
     var ctx = this.canvas.getContext('2d')
     ctx.font = "130px sans-serif"
     if (this.countdown.doCount === true) {
-      ctx.fillText(this.countdown.count + 1, 350, 250, 100)
+      ctx.fillText(this.countdown.count + 1, 350, 250)
     }
   }
 
