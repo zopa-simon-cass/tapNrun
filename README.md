@@ -1,8 +1,7 @@
-# tapNrun - Makers Academy Final Project
+# tapNrun 
 
 
 ## Getting Started
-
 1. Clone this repository `git clone git@github.com:scass91/tapNrun.git`
 2. Change into directory `cd tapNrun`
 3. run npm to install dependencies `npm install`
@@ -43,9 +42,7 @@ As a user,
 So that I can replay the game,
 I can click on the 'Play again' button to restart.
 
-
 ```
-
 ## Testing
 
 1. Run tests with the testing framework Jasmine `open -a "Google Chrome" SpecRunner.html`
