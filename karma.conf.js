@@ -9,9 +9,9 @@ module.exports = function(config) {
       // 'spec/timerSpec.js',
       // 'spec/lane3RunnerSpec.js',
       // 'spec/lane4RunnerSpec.js',
-      'spec/controllerSpec.js',
+      // 'spec/controllerSpec.js',
       // 'spec/player2Spec.js',
-      // 'spec/countdownSpec.js'
+      'spec/countdownSpec.js'
 
 
     ],
