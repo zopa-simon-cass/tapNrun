@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   display = new Display();
-  display.startButton();
+  display.startDraw();
 
   display.canvas.addEventListener("mousedown", function () {
-    if (display.mouseOn === true) {
+    if (display.controller.mouseOn === true) {
       display.countdown.count = 3
       display.countdown.startCountdown();
       display.drawCanvas();
