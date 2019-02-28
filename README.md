@@ -25,7 +25,7 @@ In addition, there will be a three second countdown before the game begins.
 
 ## Health Warning
 
-Due to the addictive nature of the game, be aware of contractive repetitive strain injury (RSI) from tap tap tappin' ;)
+Due to the addictive nature of the game, be aware of contracting repetitive strain injury (RSI) from tap tap tappin' ;)
 
 ## User Stories
 
