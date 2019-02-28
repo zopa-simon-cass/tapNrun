@@ -16,9 +16,7 @@ class Display {
     this.myAudio = new Audio('./assets/Audio/raceon.mp3');
     this.time1 = null
     this.time2 = null
-    this.countTimer
-    this.count = 3
-    this.doCount = false
+    this.countdown = new Countdown(this.player, this.player2, this.lane3runner, this.lane4runner, this.timer)
   }
 
   startButton() {
@@ -39,16 +37,20 @@ class Display {
     this.interval = setInterval(this.drawCanvas.bind(this), 10)
   }
 
-  playerDraw() {
-    var ctx = this.canvas.getContext('2d')
+  drawPlayers() {
     var p1 = new Image()
     var p2 = new Image()
     p1.src = ("./assets/Joao.png")
     p2.src = ("./assets/Joao1.png")
+    this.imgToShape(p1, p2)
+  }
+
+  imgToShape(img1, img2) {
+    var ctx = this.canvas.getContext('2d')
     ctx.beginPath()
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    ctx.drawImage(p1, this.player.x, this.player.y, 100, 100)
-    ctx.drawImage(p2, this.player2.x, this.player2.y, 100, 100)
+    ctx.drawImage(img1, this.player.x, this.player.y, 100, 100)
+    ctx.drawImage(img2, this.player2.x, this.player2.y, 100, 100)
     ctx.arc(this.lane3runner.x, this.lane3runner.y, 40, 0, 2 * Math.PI);
     ctx.arc(this.lane4runner.x, this.lane4runner.y, 40, 0, 2 * Math.PI);
     ctx.fill()
@@ -93,15 +95,15 @@ class Display {
   cdShow() {
     var ctx = this.canvas.getContext('2d')
     ctx.font = "130px sans-serif"
-    if (this.doCount === true) {
-      ctx.fillText(this.count + 1, 450, 250)
+    if (this.countdown.doCount === true) {
+      ctx.fillText(this.countdown.count + 1, 450, 250)
     }
   }
 
   drawCanvas() {
     var ctx = this.canvas.getContext('2d')
     this.playAudio()
-    this.playerDraw()
+    this.drawPlayers()
     this.timerShow()
     this.finishTimeShow()
     this.cdShow()
@@ -151,25 +153,5 @@ class Display {
     this.time1 = null
     this.time2 = null
     this.stopwatch = setInterval(this.trackFinish.bind(this), 10)
-  }
-
-  countdown() {
-    if (this.count != 0) {
-      this.doCount = true
-      this.count -= 1
-    } else if(this.count === 0) {
-      clearInterval(this.countTimer)
-      this.count -= 1
-      display.player.moveAllowed = true;
-      display.player2.moveAllowed = true;
-      display.lane3runner.moveAllowed = true;
-      display.lane4runner.moveAllowed = true;
-      this.timer.start()
-      this.doCount = false
-    }
-  }
-
-  startCountdown() {
-    this.countTimer = setInterval(this.countdown.bind(this), 1000)
   }
 }

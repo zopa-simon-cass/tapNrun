@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   display.canvas.addEventListener("mousedown", function () {
     if (display.mouseOn === true) {
-      display.count = 3
-      display.startCountdown();
+      display.countdown.count = 3
+      display.countdown.startCountdown();
       display.drawCanvas();
       display.infiniteDraw();
       display.controller.enableControls();
