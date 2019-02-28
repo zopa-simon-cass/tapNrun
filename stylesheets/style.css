@@ -9,14 +9,29 @@ body {
   max-height: 481;
 }
 
-h1 {
+@keyframes bounce {
+  from {transform: translateY(-20%); }
+  to {transform: translateY(13%); }
+}
+
+#title {
   color: #060505;
   font-size: 65px;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+}
+
+span {
+  color: red;
+  font-size: 100px;
 }
 
 #standings {
   position: fixed;
-  align-items: center;
+  align-content: center;
   align-self: center;
   display: inline-block;
 }
