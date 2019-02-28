@@ -10,10 +10,6 @@ describe("Controller", () => {
     display = new Display
   })
 
-  // it("controller class has access to the querySelector", () => {
-  //   expect(controller.canvas).toEqual(document.getElementById('canvas'));
-  // });
-
   it("checks that the ai can move", () => {
     controller.l3.moveAllowed = true
     controller.l3.move()
