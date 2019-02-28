@@ -3,10 +3,10 @@ class Display {
     this.canvas = document.querySelector('canvas');
     this.canvas.width = 750
     this.canvas.height = 420
-    this.startline = -30
+    this.startline = -20
     this.timer = new Timer
-    this.player = new Player(this.startline, 15, 12)
-    this.player2 = new Player(this.startline, 160, 12)
+    this.player = new Player(this.startline, 23, 12)
+    this.player2 = new Player(this.startline, 120, 12)
     this.lane3runner = new Player(50, 332, 0.98)
     this.lane4runner = new Player(50, 450, 0.7)
     this.controller = new Controller(this.player, this.player2, this.lane3runner, this.lane4runner, this.timer)
