@@ -59,8 +59,9 @@ class Display {
 
   timerShow() {
     var ctx = this.canvas.getContext('2d')
-    ctx.font = "30px sans-serif";
-    ctx.fillText(this.timer.formatTime(), 745, 490)
+    ctx.font = "20px sans-serif";
+    ctx.fillText(this.timer.formatTime(), 600, 15)
+
   }
 
   finishTimeShow() {
