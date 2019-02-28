@@ -15,6 +15,7 @@ describe("Player2", ()=> {
     })
 
     it("player movement changes x co-ordinates ", () => {
+      player.moveAllowed = true
       player.move();
       expect(player.x).toEqual(4);
     })
