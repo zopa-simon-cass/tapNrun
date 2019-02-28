@@ -1,19 +1,20 @@
 class Player {
-  constructor() {
-    this.x = -8
-    this.y = 35
+  constructor(x, y, speed) {
+    this.x = x
+    this.y = y
+    this.speed = speed
     this.moveAllowed = false
   }
 
   move() {
     if (this.moveAllowed === true) {
-      this.x += 12;
+      this.x += this.speed;
     }
   }
 
-  reset() {
-    this.x = -8
-    this.y = 35
+  reset(x, y) {
+    this.x = x
+    this.y = y
   }
 
 }
