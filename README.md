@@ -24,6 +24,10 @@ So that I can start playing the game,
 I can click on the start button.
 
 As a user,
+So that I can see who is playing,
+The lanes and associated player names appear bellow the track.
+
+As a user,
 So that I am ready to play the game,
 I don't start racing until the 321 countdown is complete.
 
