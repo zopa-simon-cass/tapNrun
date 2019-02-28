@@ -7,8 +7,8 @@ class Display {
     this.timer = new Timer
     this.player = new Player(this.startline, 22, 12)
     this.player2 = new Player(this.startline, 120, 12)
-    this.lane3runner = new Player(this.startline, 217, 0.7)
-    this.lane4runner = new Player(this.startline, 313, 0.98)
+    this.lane3runner = new Player(this.startline, 217, (Math.random()))
+    this.lane4runner = new Player(this.startline, 313, (Math.random()))
     this.controller = new Controller(this.player, this.player2, this.lane3runner, this.lane4runner, this.timer)
     this.interval
     this.myAudio = new Audio('./assets/Audio/raceon.mp3');
