@@ -20,4 +20,12 @@ describe("Controller", () => {
     expect(controller.l3.x).toEqual(22)
   })
 
+  it("checks that the player stops at the finish line", () => {
+    controller.finishLine = 10
+    controller.l3.moveAllowed = true
+    controller.stopAtFinish()
+    controller.l3.move()
+    expect(controller.p1.x).toEqual(10)
+  })
+
 });
