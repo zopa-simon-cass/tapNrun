@@ -15,14 +15,16 @@ describe("Runner in Lane 4", () => {
     });
 
     it("player movement changes x co-ordinates ", () => {
+      lane4runner.moveAllowed = true
       lane4runner.move();
-      expect(lane4runner.x).toEqual(52);
+      expect(lane4runner.x).toEqual(50.7);
     });
 
     it("consecutive player movement changes x co-ordinates ", () => {
+      lane4runner.moveAllowed = true
       lane4runner.move();
       lane4runner.move();
-      expect(lane4runner.x).toEqual(54);
+      expect(lane4runner.x).toEqual(51.400000000000006);
     })
 
     it("Player reset changes position back to the start line", () => {
