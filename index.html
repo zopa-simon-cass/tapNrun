@@ -11,45 +11,30 @@
   <script src="src/controller.js"></script>
   <script src="interface.js"></script>
   <script src="src/countdown.js"></script>
-
-  <style>
-     h1 {
-     color: #060505;
-     font-size: 65px;
-     }
-     #title span{
-     color: #EE1D1D;
-     font-size: 80px;
-     }
-
-   </style>
+  <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body >
   <center>
 
-    <h1 id="title", style="font-family:Courier;">  T A P  <span>'N'</span>
-      R U N  </h1>
-    <canvas id="canvas" tabindex="0" style="background:
-    url('./assets/Background1.png')"></canvas>
+    <div><h1 id="title", style="font-family:Courier;">  T A P  <span id="capitalN">'N'</span>
+      R U N  </h1></div>
 
-    <!--<h2 id="leaderboard", style="font-family:Courier;"> Standings </h2>-->
-    <h3 id="player1", style="font-family:Courier;"></h3>
-    <h3 id="player2", style="font-family:Courier;"></h3>
-    <h3 id="lane3", style="font-family:Courier;"> Lane 3: Jacq</h3>
-    <h3 id="lane4", style="font-family:Courier;"> Lane 4: Subomi</h3>
+      <canvas id="canvas" tabindex="0"></canvas>
 
+      <div id='standings'>
+        <!--<h2 id="leaderboard", style="font-family:Courier;"> Standings </h2>-->
+        <h3 id="player1", style="font-family:Courier;"></h3>
+        <h3 id="player2", style="font-family:Courier;"></h3>
+        <h3 id="lane3", style="font-family:Courier;"> Lane 3: Jacq</h3>
+        <h3 id="lane4", style="font-family:Courier;"> Lane 4: Subomi</h3>
+      </div>
+    </center>
+  </body>
+  </html>
 
-  </center>
+  <!-- circle that moves on click on x axis to other side of screen -->
+  <!--  Set interval function, need an animation loop that starts with an
+  empty canvas, then draws it
+  neet to control canvas with keyboard.-->
 
-</body>
-</html>
-
-
-<!-- circle that moves on click on x axis to other side of screen -->
-<!--  Set interval function, need an animation loop that starts with an
-empty canvas, then draws it
-neet to control canvas with keyboard.-->
-
-
-
-<!-- can test starting position coordinates, and then test how far it is after a certain amount of clicks  -->
+  <!-- can test starting position coordinates, and then test how far it is after a certain amount of clicks  -->

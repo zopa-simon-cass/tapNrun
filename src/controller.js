@@ -6,7 +6,7 @@ class Controller {
     this.l3 = l3
     this.l4 = l4
     this.timer = timer
-    this.finishLine = 780
+    this.finishLine = 603
     this.stopwatch = setInterval(this.stopAtFinish.bind(this), 10)
     this.mouseOn = true
   }
@@ -26,16 +26,16 @@ class Controller {
   stopAtFinish() {
     if(this.p1.x > this.finishLine) { this.p1.moveAllowed = false }
     if(this.p2.x > this.finishLine) { this.p2.moveAllowed = false }
-    if(this.l3.x > 845) { this.l3.moveAllowed = false }
-    if(this.l4.x > 845) { this.l4.moveAllowed = false }
+    if(this.l3.x > this.finishLine) { this.l3.moveAllowed = false }
+    if(this.l4.x > this.finishLine) { this.l4.moveAllowed = false }
     this.finishGame();
   }
 
   finishGame() {
     var p1fin = this.p1.x > this.finishLine
     var p2fin = this.p2.x > this.finishLine
-    var l3fin = this.l3.x > 845
-    var l4fin = this.l4.x > 845
+    var l3fin = this.l3.x > this.finishLine
+    var l4fin = this.l4.x > this.finishLine
     if(p1fin && p2fin && l3fin && l4fin) {
       this.timer.stop()
       clearInterval(this.stopwatch)
@@ -47,10 +47,10 @@ class Controller {
   }
 
   restart() {
-    this.p1.reset(-8,35)
-    this.p2.reset(-8, 160)
-    this.l3.reset(50, 332)
-    this.l4.reset(50, 450)
+    this.p1.reset(display.startline, 22)
+    this.p2.reset(display.startline, 120)
+    this.l3.reset(display.startline, 217)
+    this.l4.reset(display.startline, 313)
     this.timer.reset()
     display.time1 = null
     display.time2 = null

@@ -1,0 +1,43 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #FFCC00;
+  min-width: 500px;
+  min-height: 500px;
+  max-width: 1280;
+  max-height: 481;
+}
+
+@keyframes bounce {
+  from {transform: translateY(-20%); }
+  to {transform: translateY(13%); }
+}
+
+#title {
+  color: #060505;
+  font-size: 65px;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+}
+
+span {
+  color: red;
+  font-size: 100px;
+}
+
+#standings {
+  position: fixed;
+  align-content: center;
+  align-self: center;
+  display: inline-block;
+}
+
+#canvas {
+  background-position: center;
+  background-size:     cover;
+  background-repeat: no-repeat;
+}
