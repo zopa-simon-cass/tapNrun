@@ -14,6 +14,8 @@ class Display {
     this.myAudio = new Audio('./assets/Audio/raceon.mp3');
     this.time1 = null
     this.time2 = null
+    this.time3 = null
+    this.time4 = null
     this.countdown = new Countdown(this.player, this.player2, this.lane3runner, this.lane4runner, this.timer)
   }
 
@@ -67,10 +69,11 @@ class Display {
   finishTimeShow() {
     var ctx = this.canvas.getContext('2d')
     this.finishTimeCalc()
+    ctx.font = "30px sans-serif";
     if (this.time1 != null) { ctx.fillText(this.time1, 450, 70) }
     if (this.time2 != null) { ctx.fillText(this.time2, 450, 170) }
-    if (this.lane3runner.x > this.controller.finishLine) { ctx.fillText("00:08:110", 450, 270) }
-    if (this.lane4runner.x > this.controller.finishLine) { ctx.fillText("00:11:352", 450, 370) }
+    if (this.time3 != null) { ctx.fillText(this.time3, 450, 270) }
+    if (this.time4 != null) { ctx.fillText(this.time4, 450, 370) }
   }
 
   finishTimeCalc() {
@@ -79,6 +82,12 @@ class Display {
     }
     if (this.player2.x > this.controller.finishLine && this.time2 === null) {
       this.time2 = this.timer.formatTime()
+    }
+    if (this.lane3runner.x > this.controller.finishLine && this.time3 === null) {
+      this.time3 = this.timer.formatTime()
+    }
+    if (this.lane4runner.x > this.controller.finishLine && this.time4 === null) {
+      this.time4 = this.timer.formatTime()
     }
   }
 
@@ -104,6 +113,7 @@ class Display {
     this.cdShow()
     this.controller.mouseOn = false
     this.controller.aiMove();
+    if (this.lane4runner.x === this.controller.finishLine) {console.log(this.timer.formatTime())};
   }
 
   drawReplay() {
