@@ -6,7 +6,7 @@ module.exports = function(config) {
       // 'spec/gameSpec.js',
       // 'spec/buttonSpec.js',
       'spec/playerSpec.js',
-      // 'spec/timerSpec.js',
+      'spec/timerSpec.js',
       // 'spec/lane3RunnerSpec.js',
       // 'spec/lane4RunnerSpec.js',
       // 'spec/controllerSpec.js',
