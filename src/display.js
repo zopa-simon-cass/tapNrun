@@ -70,7 +70,7 @@ class Display {
     if (this.lane3runner.x > 845) { ctx.fillText("00:08:110", 650, 340) }
     if (this.lane4runner.x > 845) { ctx.fillText("00:11:352", 650, 460) }
   }
-    
+
   finishTimeCalc() {
     if (this.player.x > this.controller.finishLine && this.time1=== null) {
       this.time1 = this.timer.formatTime()
@@ -90,6 +90,11 @@ class Display {
 
   drawCanvas() {
     var ctx = this.canvas.getContext('2d')
+    this.canvas.style.backgroundImage = "url('./assets/Background1.png')";
+    this.canvas.backgroundPosition = "50%, 50%";
+    this.canvas.style.backgroundHeight = "100%";
+    this.canvas.style.backgroundWidth = "100%";
+    this.canvas.style.objectFit = "cover";
     this.playAudio()
     this.drawPlayers()
     this.timerShow()

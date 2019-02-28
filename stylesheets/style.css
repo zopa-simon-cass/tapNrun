@@ -19,7 +19,7 @@ h1 {
   to {background-color: yellow;}
 }
 
-#title span{
+#title span {
   animation-name: bounce;
   color: #EE1D1D;
   font-size: 80px;
