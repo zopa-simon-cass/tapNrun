@@ -2,16 +2,16 @@ module.exports = function(config) {
   config.set({
     files: [
       'src/*.js',
-      'spec/featureSpec.js',
-      'spec/gameSpec.js',
-      'spec/buttonSpec.js',
+      // 'spec/featureSpec.js',
+      // 'spec/gameSpec.js',
+      // 'spec/buttonSpec.js',
       'spec/playerSpec.js',
-      'spec/timerSpec.js',
-      'spec/lane3RunnerSpec.js',
-      'spec/lane4RunnerSpec.js',
+      // 'spec/timerSpec.js',
+      // 'spec/lane3RunnerSpec.js',
+      // 'spec/lane4RunnerSpec.js',
       'spec/controllerSpec.js',
-      'spec/player2Spec.js',
-      'spec/countdownSpec.js'
+      // 'spec/player2Spec.js',
+      // 'spec/countdownSpec.js'
 
 
     ],
