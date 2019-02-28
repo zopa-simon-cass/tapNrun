@@ -1,18 +1,34 @@
 # tapNrun - Makers Academy Final Project
 
-Getting started
------
 
-1. Clone this repo `git clone git@github.com:scass91/tapNrun.git`
-2. Change directory `cd tapNrun`
-3. Run npm to install dependencies `npm install`
+
+## Getting Started
+
+* Clone this repository
+```
+$ git clone git@github.com:scass91/tapNrun.git
+```
+* Go into the tapNrun repository
+```
+$ cd tapNrun
+```
+* Run npm to install dependencies
+```
+$ npm install
+```
+* Run the game
+```
+$ open -a "Google Chrome" index.html
+```
+
+
 
 ## Testing
 
 1. Run tests with Jasmine `open -a "Google Chrome" SpecRunner.html`
 2. Alternatively tests can be ran in Terminal using Karma `npm test`
 
-### Code coverage
+## Code coverage
 
 1. Globally install Karma `npm install -g karma-cli`. Might need to remove the `-g` flag if this does not work initially.
 2. Install necessary dependencies `npm install`
