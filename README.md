@@ -62,27 +62,18 @@ I can click on the 'Play again' button to restart.
 ---
 Our game is hosted on Github pages. [Tap N' Run](https://scass91.github.io/tapNrun)
 
-## Technologies
-
-* Javascript
-* HTML5/Canvas
-* Canvas
-* Karma
-* Jasmine
-* Google Draw
-* Microsoft Word
 ## Technologies used
 
 Tech | Description
 ------------- | -------------
 [Javascript](https://www.javascript.com/) | Main language used
+[HTML5 Canvas](https://www.w3schools.com/html/html5_canvas.asp) | Object display tool
 [Travis CI](https://travis-ci.org/) | Continuous integration running tests and linters before merging branches
 [Trello](https://trello.com/) | Tracking and organising workflow
 [Karma](https://karma-runner.github.io/latest/index.html) | Javascript test runner
 [Jasmine](https://jasmine.github.io) | Javascript testing framework
 [Github pages](https://pages.github.com/) | Deployment
-[Google draw](https://quickdraw.withgoogle.com/) | 
-
+[Google draw](https://quickdraw.withgoogle.com/) | Drawing of assets
 
 ## Contributors
 
