@@ -110,7 +110,7 @@ class Display {
     let img = new Image()
     img.src = ("./assets/playagain-btn-big.png")
     img.onload = function() {
-      ctx.drawImage(img, 225, 125, 450, 250)
+      ctx.drawImage(img, 250, 185, 250, 50)
     }
     this.controller.restart()
   }
