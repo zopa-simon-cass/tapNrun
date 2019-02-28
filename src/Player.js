@@ -1,7 +1,7 @@
 class Player {
-  constructor() {
+  constructor(y) {
     this.x = -8
-    this.y = 35
+    this.y = y
     this.moveAllowed = false
   }
 
@@ -11,9 +11,9 @@ class Player {
     }
   }
 
-  reset() {
+  reset(y) {
     this.x = -8
-    this.y = 35
+    this.y = y
   }
 
 }

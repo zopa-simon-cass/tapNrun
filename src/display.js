@@ -6,8 +6,8 @@ class Display {
     // FINISH LINE NEEDS TO BE MADE ADAPTIVE/ NOT 150
     this.finishLine = 7.8/9 * this.canvas.width
     this.timer = new Timer
-    this.player = new Player
-    this.player2 = new Player2
+    this.player = new Player(35)
+    this.player2 = new Player(160)
     this.controller = new Controller
     this.controller2 = new Controller
     this.interval
@@ -122,8 +122,8 @@ class Display {
   }
 
   restart() {
-    this.player.reset()
-    this.player2.reset()
+    this.player.reset(35)
+    this.player2.reset(160)
     this.lane3runner.reset()
     this.lane4runner.reset()
     this.timer.reset()
