@@ -10,7 +10,9 @@ module.exports = function(config) {
       'spec/lane3RunnerSpec.js',
       'spec/lane4RunnerSpec.js',
       'spec/controllerSpec.js',
-      'spec/player2Spec.js'
+      'spec/player2Spec.js',
+      'spec/countdownSpec.js'
+
 
     ],
 
