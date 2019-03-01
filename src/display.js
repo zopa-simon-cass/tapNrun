@@ -4,11 +4,12 @@ class Display {
     this.canvas.width = 750
     this.canvas.height = 420
     this.startline = -20
+    var speeds = [0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1.0, 1.05, 1.1, 1.15, 1.2, 1.25]
     this.timer = new Timer
     this.player = new Player(this.startline, 22, 12)
     this.player2 = new Player(this.startline, 120, 12)
-    this.lane3runner = new Player(this.startline, 217, (Math.random()))
-    this.lane4runner = new Player(this.startline, 313, (Math.random()))
+    this.lane3runner = new Player(this.startline, 217, speeds[Math.floor(Math.random()*speeds.length)])
+    this.lane4runner = new Player(this.startline, 313, speeds[Math.floor(Math.random()*speeds.length)])
     this.controller = new Controller(this.player, this.player2, this.lane3runner, this.lane4runner, this.timer)
     this.interval
     this.myAudio = new Audio('./assets/Audio/raceon.mp3');
