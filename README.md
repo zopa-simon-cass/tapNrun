@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/scass91/tapNrun.svg?branch=master)](https://travis-ci.com/scass91/tapNrun)
+
 # tapNrun
 
 tapNrun is a sports based game that we have created for our Makers Academy final project.  This game has been built using Javascript and HTML canvas and is hosted on Github pages.
