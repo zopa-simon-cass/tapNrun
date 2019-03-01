@@ -44,15 +44,4 @@ describe("Timer", function() {
 		expect(timer.formatTime()).toEqual("00:00:000")
 	})
 
-	//it("delta returns gap in time", function () {
-	//var timeOut
-	//var timeOut2
-	//timer.offset = Date.now()
-	////spyOn(timer, "now").and.returnValue(568497)
-	////spyOn(timer, "offset").and.returnValue(568490)
-	//timeOut = setTimeout(timer.delta.bind(timer), 2000)
-	//setTimeout(expect(timer.timePassed).toEqual(2000), 2000)
-	////expect(timer.timePassed).toEqual(2000)
-	//})
-
 })

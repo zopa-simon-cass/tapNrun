@@ -8,13 +8,17 @@ describe("Display", () => {
 		expect(display.player).toEqual(jasmine.any(Player))
 	})
 
-	it("Player x cooridinates are initially -8", () => {
-		expect(display.player.x).toEqual(-8)
+	it("Player x coordinates are initially -8", () => {
+		expect(display.player.x).toEqual(-20)
 	})
 
 	it("Display class is instanciated with a runner in lane 3", () => {
-		expect(display.lane3runner).toEqual(jasmine.any(Lane3Runner))
+		expect(display.lane3runner).toEqual(jasmine.any(Player))
 	})
+
+  it("Display class is instanciated with a runner in lane 4", () => {
+    expect(display.lane4runner).toEqual(jasmine.any(Player))
+  })
 
 
 })
