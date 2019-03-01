@@ -100,13 +100,17 @@ class Display {
 		}
 	}
 
-	drawCanvas() {
-		var ctx = this.canvas.getContext("2d")
+  canvasStyle() {
 		this.canvas.style.backgroundImage = "url('./assets/Background1.png')"
 		this.canvas.backgroundPosition = "50%, 50%"
 		this.canvas.style.backgroundHeight = "100%"
 		this.canvas.style.backgroundWidth = "100%"
 		this.canvas.style.objectFit = "cover"
+  }
+
+	drawCanvas() {
+		var ctx = this.canvas.getContext("2d")
+    this.canvasStyle()
 		this.playAudio()
 		this.drawPlayers()
 		this.timerShow()
