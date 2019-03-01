@@ -8,9 +8,21 @@ describe("Display", () => {
 		expect(display.player).toEqual(jasmine.any(Player))
 	})
 
-	it("Player x coordinates are initially -8", () => {
+	it("Player 1 x coordinates are initially aligned to the start line", () => {
 		expect(display.player.x).toEqual(-20)
 	})
+
+  it("Player 2 x coordinates are initially aligned to the start line", () => {
+		expect(display.player2.x).toEqual(-20)
+	})
+
+  it("Display class is instanciated with a runner in lane 1", () => {
+    expect(display.player).toEqual(jasmine.any(Player))
+  })
+
+  it("Display class is instanciated with a runner in lane 2", () => {
+    expect(display.player2).toEqual(jasmine.any(Player))
+  })
 
 	it("Display class is instanciated with a runner in lane 3", () => {
 		expect(display.lane3runner).toEqual(jasmine.any(Player))
