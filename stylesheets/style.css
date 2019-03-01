@@ -41,3 +41,28 @@ span {
   background-size:     cover;
   background-repeat: no-repeat;
 }
+
+#table {
+  list-style: none;
+  transform: translateY(-220px);
+  position: relative;
+  align-content: center;
+  align-self: center;
+  display: inline-block;
+}
+
+#a-key {
+  animation-name: bounce;
+  animation-duration: 0.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate-reverse;
+}
+
+#l-key {
+  animation-name: bounce;
+  animation-duration: 0.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate-reverse;
+}

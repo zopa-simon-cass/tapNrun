@@ -36,19 +36,23 @@ class Display {
 	drawPlayers() {
 		var p1 = new Image()
 		var p2 = new Image()
-		p1.src = ("./assets/Joao.png")
-		p2.src = ("./assets/Joao1.png")
-		this.imgToShape(p1, p2)
+    var p3 = new Image()
+    var p4 = new Image()
+		p1.src = ("./assets/Bea.png")
+		p2.src = ("./assets/Jacques.png")
+    p3.src = ("./assets/Subomi.png")
+    p4.src = ("./assets/Tom.png")
+		this.imgToShape(p1, p2, p3, p4)
 	}
 
-	imgToShape(img1, img2) {
+	imgToShape(img1, img2, img3, img4) {
 		var ctx = this.canvas.getContext("2d")
 		ctx.beginPath()
 		ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 		ctx.drawImage(img1, this.player.x, this.player.y, 85, 85)
 		ctx.drawImage(img2, this.player2.x, this.player2.y, 85, 85)
-		ctx.rect(this.lane3runner.x, this.lane3runner.y, 85, 85)
-		ctx.rect(this.lane4runner.x, this.lane4runner.y, 85, 85 )
+		ctx.drawImage(img3, this.lane3runner.x, this.lane3runner.y, 85, 85)
+		ctx.drawImage(img4, this.lane4runner.x, this.lane4runner.y, 85, 85 )
 		ctx.fill()
 	}
 
